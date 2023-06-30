@@ -1,5 +1,5 @@
-<x-app-layout page-title="hello">
-    tabs
+<x-app-layout page-title="Tabs |">
+    Tabs
 
     <x-tabs activeTabTag="{{ $warhammer_products['categories'][0]['tag'] }}">
         @foreach ($warhammer_products['categories'] as $warhammer_products_category)

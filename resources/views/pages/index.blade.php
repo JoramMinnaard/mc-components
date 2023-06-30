@@ -1,3 +1,3 @@
-<x-app-layout page-title="hello">
-    hello
+<x-app-layout page-title="Home |">
+    
 </x-app-layout>

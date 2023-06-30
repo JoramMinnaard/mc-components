@@ -1,4 +1,4 @@
-<x-app-layout page-title="hello">
+<x-app-layout page-title="Accordion |">
     Accordion
 
     <x-accordion selected="first">

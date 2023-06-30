@@ -1,5 +1,5 @@
 <div 
-    class="flex flex-col mt-12 overflow-hidden rounded"
+    class="flex flex-col overflow-hidden rounded"
     x-data="{
         activeTab: '{{ $activeTabTag }}',
         tabHeadings: [],
