@@ -37,7 +37,7 @@
                 </x-slot>
 
                 <x-slot name="content">
-                    <x-navigation.dropdown-link href="{{-- route('accordion') --}}">
+                    <x-navigation.dropdown-link href="{{ route('components.accordion') }}">
                         {{ __('Accordion') }}
                     </x-navigation.dropdown-link>
                     
@@ -76,7 +76,7 @@
                 </x-slot>
 
                 <x-slot name="content">
-                    <x-navigation.responsive-dropdown-link href="{{-- route('accordion') --}}">
+                    <x-navigation.responsive-dropdown-link href="{{ route('components.accordion') }}">
                         {{ __('Accordion') }}
                     </x-navigation.responsive-dropdown-link>
                     

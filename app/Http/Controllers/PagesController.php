@@ -19,4 +19,9 @@ class PagesController extends Controller
 
         return view('pages.tabs', compact('warhammer_products'));
     }
+
+    public function accordion(): View
+    {
+        return view('pages.accordion');
+    }
 }

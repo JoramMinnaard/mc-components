@@ -16,3 +16,4 @@ use App\Http\Controllers\PagesController;
 
 Route::get('/', [PagesController::class, 'index'])->name('home');
 Route::get('/components/tabs', [PagesController::class, 'tabs'])->name('components.tabs');
+Route::get('/components/accordion', [PagesController::class, 'accordion'])->name('components.accordion');
