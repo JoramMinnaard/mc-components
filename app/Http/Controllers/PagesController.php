@@ -11,4 +11,12 @@ class PagesController extends Controller
     {
         return view('pages.index');
     }
+
+    public function tabs(): View
+    {
+        $jsonFile = base_path().'/app/Http/Controllers/data.json';
+        $warhammer_products = json_decode(file_get_contents($jsonFile), true);
+
+        return view('pages.tabs', compact('warhammer_products'));
+    }
 }

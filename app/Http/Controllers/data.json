@@ -1,0 +1,222 @@
+{
+    "categories": [
+        {
+            "tag": "aos",
+            "displayName": "Age of Sigmar",
+            "products": [
+                {
+                    "release_date": "5/27/23",
+                    "ss_code": "103-25",
+                    "name": "KILL TEAM: ASHES OF FAITH (ENG)",
+                    "price": "68.75",
+                    "weight": "1.3998"
+                },
+                {
+                    "release_date": "5/27/23",
+                    "ss_code": "31-61",
+                    "name": "LEGIONES ASTARTES: VINDICATOR SIEGE TANK",
+                    "price": "30.25",
+                    "weight": "0.4026",
+                    "images": {
+                        "full": "https://placekitten.com/1500/1000",
+                        "scaled": "https://placekitten.com/500/300"
+                    }
+                },
+                {
+                    "release_date": "5/20/23",
+                    "ss_code": "112-02",
+                    "name": "WARCRY: ASKURGAN TRUEBLADES",
+                    "price": "27.50",
+                    "weight": "0.2092",
+                    "images": {
+                        "full": "https://cdn.millenniumcomputers.nl/warhammer/full/60010799020_WhUnderworldsStarterSet_0.jpg",
+                        "scaled": "https://cdn.millenniumcomputers.nl/warhammer/scaled/60010799020_WhUnderworldsStarterSet_0.jpg"
+                    }
+                },
+                {
+                    "release_date": "5/20/23",
+                    "ss_code": "112-03",
+                    "name": "WARCRY: CLAWS OF KARANAK",
+                    "price": "27.50",
+                    "weight": "0.2174",
+                    "images": {
+                        "full": "https://cdn.millenniumcomputers.nl/warhammer/full/60050799009_WhuVoidcursedThralls_0.jpg",
+                        "scaled": "https://cdn.millenniumcomputers.nl/warhammer/scaled/60050799009_WhuVoidcursedThralls_0.jpg"
+                    }
+                },
+                {
+                    "release_date": "5/20/23",
+                    "ss_code": "112-04",
+                    "name": "WARCRY: NIGHTMARE QUEST (ENGLISH)",
+                    "price": "79.75",
+                    "weight": "1.9463",
+                    "images": {
+                        "full": "https://cdn.millenniumcomputers.nl/warhammer/full/60120707007_WhuTheHeadsmensCurse_0.jpg",
+                        "scaled": "https://cdn.millenniumcomputers.nl/warhammer/scaled/60120707007_WhuTheHeadsmensCurse_0.jpg"
+                    }
+                },
+                {
+                    "release_date": "5/20/23",
+                    "ss_code": "BL3069",
+                    "name": "PRINCE MAESA (PB)",
+                    "price": "7.50",
+                    "weight": "0.239",
+                    "images": {
+                        "full": "https://placekitten.com/1500/1000",
+                        "scaled": "https://placekitten.com/500/300"
+                    }
+                }
+            ]
+        },
+        {
+            "tag": "wh40k",
+            "displayName": "Warhammer 40K",
+            "products": [
+                {
+                    "release_date": "5/20/23",
+                    "ss_code": "BL3090",
+                    "name": "GOTREK GURNISSON: BLIGHTSLAYER (HB)",
+                    "price": "13.20",
+                    "weight": "0.655",
+                    "category_id": 2,
+                    "images": {
+                        "full": "https://placekitten.com/1500/1000",
+                        "scaled": "https://placekitten.com/500/300"
+                    }
+                },
+                {
+                    "release_date": "5/19/23",
+                    "ss_code": "WD05-60",
+                    "name": "WHITE DWARF 488 (MAY-23) (ENGLISH)",
+                    "price": "5.40",
+                    "weight": "0.419",
+                    "category_id": 2,
+                    "images": {
+                        "full": "https://placekitten.com/1500/1000",
+                        "scaled": "https://placekitten.com/500/300"
+                    }
+                },
+                {
+                    "release_date": "-",
+                    "ss_code": "01-01",
+                    "name": "MIDDLE-EARTH SBG RULES MANUAL 2022 (ENG)",
+                    "price": "30.00",
+                    "weight": "1.092",
+                    "category_id": 2,
+                    "images": {
+                        "full": "https://placekitten.com/1500/1000",
+                        "scaled": "https://placekitten.com/500/300"
+                    }
+                },
+                {
+                    "release_date": "-",
+                    "ss_code": "01-02-60",
+                    "name": "ARMIES OF THE LORD OF THE RINGS (ENG)",
+                    "price": "30.00",
+                    "weight": "1.1248",
+                    "category_id": 2,
+                    "images": {
+                        "full": "https://placekitten.com/1500/1000",
+                        "scaled": "https://placekitten.com/500/300"
+                    }
+                },
+                {
+                    "release_date": "-",
+                    "ss_code": "01-07",
+                    "name": "ADEPTUS CUSTODES: CUSTODIAN GUARD",
+                    "price": "27.50",
+                    "weight": "0.158",
+                    "category_id": 2,
+                    "images": {
+                        "full": "https://placekitten.com/1500/1000",
+                        "scaled": "https://placekitten.com/500/300"
+                    }
+                }
+            ]
+        },
+        {
+            "tag": "paint",
+            "displayName": "Verf",
+            "products": [
+                {
+                    "release_date": "-",
+                    "ss_code": "01-08",
+                    "name": "ADEPTUS CUSTODES: SISTERS OF SILENCE",
+                    "price": "24.75",
+                    "weight": "0.1183",
+                    "category_id": 3,
+                    "images": {
+                        "full": "https://placekitten.com/1500/1000",
+                        "scaled": "https://placekitten.com/500/300"
+                    }
+                },
+                {
+                    "release_date": "-",
+                    "ss_code": "01-10",
+                    "name": "ADEPTUS CUSTODES: TRAJANN VALORIS",
+                    "price": "19.25",
+                    "weight": "0.077",
+                    "category_id": 3,
+                    "images": {
+                        "full": "https://placekitten.com/1500/1000",
+                        "scaled": "https://placekitten.com/500/300"
+                    }
+                },
+                {
+                    "release_date": "-",
+                    "ss_code": "01-11",
+                    "name": "ADEPTUS CUSTODES: CUSTODIAN WARDENS",
+                    "price": "27.50",
+                    "weight": "0.19",
+                    "category_id": 3,
+                    "images": {
+                        "full": "https://placekitten.com/1500/1000",
+                        "scaled": "https://placekitten.com/500/300"
+                    }
+                }
+            ]
+        },
+        {
+            "tag": "misc",
+            "displayName": "Diverse",
+            "products": [
+                {
+                    "release_date": "-",
+                    "ss_code": "01-12",
+                    "name": "ADEPTUS CUSTODES: VERTUS PRAETORS",
+                    "price": "27.50",
+                    "weight": "0.276",
+                    "category_id": 4,
+                    "images": {
+                        "full": "https://placekitten.com/1500/1000",
+                        "scaled": "https://placekitten.com/500/300"
+                    }
+                },
+                {
+                    "release_date": "-",
+                    "ss_code": "01-13",
+                    "name": "ADEPTUS CUSTODES: ALLARUS CUSTODIANS",
+                    "price": "24.75",
+                    "weight": "0.183",
+                    "category_id": 4,
+                    "images": {
+                        "full": "https://placekitten.com/1500/1000",
+                        "scaled": "https://placekitten.com/500/300"
+                    }
+                },
+                {
+                    "release_date": "-",
+                    "ss_code": "01-15",
+                    "name": "DATACARDS: ADEPTUS CUSTODES (ENG)",
+                    "price": "12.10",
+                    "weight": "0.1324",
+                    "category_id": 4,
+                    "images": {
+                        "full": "https://placekitten.com/1500/1000",
+                        "scaled": "https://placekitten.com/500/300"
+                    }
+                }
+            ]
+        }
+    ]
+}

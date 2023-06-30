@@ -41,7 +41,7 @@
                         {{ __('Accordion') }}
                     </x-navigation.dropdown-link>
                     
-                    <x-navigation.dropdown-link href="{{-- route('tabs') --}}">
+                    <x-navigation.dropdown-link href="{{ route('components.tabs') }}">
                         {{ __('Tabs') }}
                     </x-navigation.dropdown-link>
                 </x-slot>
@@ -80,7 +80,7 @@
                         {{ __('Accordion') }}
                     </x-navigation.responsive-dropdown-link>
                     
-                    <x-navigation.responsive-dropdown-link href="{{-- route('tabs') --}}">
+                    <x-navigation.responsive-dropdown-link href="{{ route('components.tabs') }}">
                         {{ __('Tabs') }}
                     </x-navigation.responsive-dropdown-link>
                 </x-slot>
