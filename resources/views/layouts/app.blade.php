@@ -6,7 +6,7 @@
         <title>{{$pageTitle}} {{config('app.name', 'Millennium Computers')}}</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        <link rel="icon" type="image/png" href="{{ asset('imgs/millennium-logo.png') }}">
+        <link rel="icon" type="image/png" href="">
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="text-neutral-700 bg-neutral-900 font-nunito">
