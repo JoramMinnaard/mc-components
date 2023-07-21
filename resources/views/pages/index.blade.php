@@ -1,66 +1,64 @@
 <x-app-layout page-title="Home |">
 
-    <div
-    x-data="{ item: {} }"
->
+    <div x-data="{ item: {} }">
 
-<button 
-image-slider-open-button
-@click="item = {
-    activeSlideId: 1, 
-    slides: [
-        {
-            'id': 1, 
-            'imageAlt': '',
-            'imageDescription': 'Product one',
-            'images': {
-                'full': 'https://cdn.millenniumcomputers.nl/warhammer/full/60010799020_WhUnderworldsStarterSet_0.jpg',
-                'scaled': 'https://cdn.millenniumcomputers.nl/warhammer/scaled/60010799020_WhUnderworldsStarterSet_0.jpg'
-            }
-        }, 
-        {
-            'id': 2, 
-            'imageAlt': '',
-            'imageDescription': 'Product two',
-            'images': {
-                'full': 'https://placekitten.com/2500/2001',
-                'scaled': 'https://placekitten.com/500/334'
-            }
-        }, 
-        {
-            'id': 3, 
-            'imageAlt': '',
-            'imageDescription': 'Product three',
-            'images': {
-                'full': 'https://placekitten.com/1500/1012',
-                'scaled': 'https://placekitten.com/500/339'
-            }
-        }, 
-        {
-            'id': 4, 
-            'imageAlt': '',
-            'imageDescription': 'Product four',
-            'images': {
-                'full': 'https://placekitten.com/1500/1007',
-                'scaled': 'https://placekitten.com/500/336'
-            }
-        }, 
-        {
-            'id': 5, 
-            'imageAlt': '',
-            'imageDescription': 'Product five',
-            'images': {
-                'full': 'https://placekitten.com/1500/1004',
-                'scaled': 'https://placekitten.com/500/332'
-            }
-        }
-    ]
-}"
->
-Product
-</button>
+        <button 
+            image-slider-open-button
+            @click="item = {
+                activeSlideId: 1, 
+                slides: [
+                    {
+                        'id': 1, 
+                        'imageAlt': '',
+                        'imageDescription': 'Product one',
+                        'images': {
+                            'full': 'https://cdn.millenniumcomputers.nl/warhammer/full/60010799020_WhUnderworldsStarterSet_0.jpg',
+                            'scaled': 'https://cdn.millenniumcomputers.nl/warhammer/scaled/60010799020_WhUnderworldsStarterSet_0.jpg'
+                        }
+                    }, 
+                    {
+                        'id': 2, 
+                        'imageAlt': '',
+                        'imageDescription': 'Product two',
+                        'images': {
+                            'full': 'https://placekitten.com/2500/2001',
+                            'scaled': 'https://placekitten.com/500/334'
+                        }
+                    }, 
+                    {
+                        'id': 3, 
+                        'imageAlt': '',
+                        'imageDescription': 'Product three',
+                        'images': {
+                            'full': 'https://placekitten.com/1500/1012',
+                            'scaled': 'https://placekitten.com/500/339'
+                        }
+                    }, 
+                    {
+                        'id': 4, 
+                        'imageAlt': '',
+                        'imageDescription': 'Product four',
+                        'images': {
+                            'full': 'https://placekitten.com/1500/1007',
+                            'scaled': 'https://placekitten.com/500/336'
+                        }
+                    }, 
+                    {
+                        'id': 5, 
+                        'imageAlt': '',
+                        'imageDescription': 'Product five',
+                        'images': {
+                            'full': 'https://placekitten.com/1500/1004',
+                            'scaled': 'https://placekitten.com/500/332'
+                        }
+                    }
+                ]
+            }"
+        >
+            Product
+        </button>
 
-<button 
+        <button 
             image-slider-open-button
             @click="item = {
                 activeSlideId: 1, 
@@ -135,15 +133,14 @@ Product
                                         <img 
                                             image-slider-image 
                                             :src="slide.images.full" 
-                                            alt="slide['imageDescription']" 
                                             loading="lazy"
                                             tabindex="0" 
                                             class="max-w-full max-h-full border-4 border-transparent rounded-sm outline-none cursor-zoom-in focus-visible:border-mc-blue-500" 
                                             :class="{ 'absolute mx-auto inset-0 cursor-zoom-out' : imgzoom == true }" 
-                                            @click="imgzoom = !imgzoom; zoomFunctionality(imgzoom, $el)"
-                                            @click.away="imgzoom = false; zoomFunctionality(imgzoom, $el)"
-                                            @keyup.enter="imgzoom = !imgzoom; zoomFunctionality(imgzoom, $el)"
-                                            @keydown.escape="imgzoom = false; zoomFunctionality(imgzoom, $el)"
+                                            @click="imgzoom = !imgzoom;"
+                                            @click.away="imgzoom = false;"
+                                            @keyup.enter="imgzoom = !imgzoom;"
+                                            @keydown.escape="imgzoom = false;"
                                         >
                                     </div>
                                 </div>
@@ -195,85 +192,6 @@ Product
                 </svg>
             </button>
         </dialog>
-    
-        <script defer>
-            function zoomFunctionality(zoom, imageElement) {
-                const { naturalWidth: width, naturalHeight: height } = imageElement;
-
-                const qs = (selector) => document.querySelector(selector);
-                const qsa = (selector) => document.querySelectorAll(selector);
-                const toggleClass = (element, className, condition) =>
-                    condition ? element.classList.add(className) : element.classList.remove(className);
-
-                const elements = {
-                    descriptions: qsa("[image-slider-image-description]"),
-                    selection: qs("[image-slider-image-selection]"),
-                    prevButton: qs("[previous-image-button]"),
-                    nextButton: qs("[next-image-button]"),
-                };
-
-                imageElement.classList.toggle(`w-[${width}px]`, zoom);
-                imageElement.classList.toggle(`h-[${height}px]`, zoom);
-                imageElement.classList.toggle(`!max-w-[${width}px]`, zoom);
-                imageElement.classList.toggle(`!max-h-[${height}px]`, zoom);
-                imageElement.classList.toggle("max-w-full", !zoom);
-                imageElement.classList.toggle("max-h-full", !zoom);
-                imageElement.style.maxWidth = zoom ? `${width}px` : "100%";
-
-                elements.descriptions?.forEach((description) => {
-                    toggleClass(description, "hidden", zoom);
-                });
-
-                toggleClass(elements.selection, "hidden", zoom);
-                toggleClass(elements.prevButton, "hidden", zoom);
-                toggleClass(elements.nextButton, "hidden", zoom);
-            }
-            
-            document.addEventListener("DOMContentLoaded", function() {
-                const qs = (selector) => document.querySelector(selector);
-                const qsa = (selector) => document.querySelectorAll(selector);
-
-                const slider = qs("[image-slider]");
-                const openButtons = qsa("[image-slider-open-button]");
-                const closeButton = qs("[image-slider-close-button]");
-                const imageSelection = qs("[image-slider-image-selection]");
-                const prevButton = qs("[previous-image-button]");
-                const nextButton = qs("[next-image-button]");
-
-                let images;
-                let description;
-
-                const closeModal = () => {
-                    slider.close();
-                    document.body.classList.remove("overflow-y-hidden");
-                };
-
-                openButtons.forEach((button) => {
-                    button.addEventListener("click", () => {
-                        images = qsa("[image-slider-image]");
-                        description = qs("[image-slider-image-description]");
-                        slider.showModal();
-                        document.body.classList.add("overflow-y-hidden");
-                    });
-                });
-
-                closeButton.addEventListener("click", closeModal);
-
-                slider.addEventListener("click", (event) => {
-                    const shouldCloseModal =
-                        !Array.from(images).some((image) => image?.contains(event.target)) &&
-                        !description?.contains(event.target) &&
-                        !imageSelection?.contains(event.target) &&
-                        !closeButton?.contains(event.target) &&
-                        !nextButton?.contains(event.target) &&
-                        !prevButton?.contains(event.target);
-
-                    if (shouldCloseModal) {
-                        closeModal();
-                    }
-                });
-            });
-        </script>
     
     </div>
     
