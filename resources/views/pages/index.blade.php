@@ -30,7 +30,7 @@
                         'imageAlt': '',
                         'imageDescription': 'Product three',
                         'images': {
-                            'full': 'https://placekitten.com/1500/1012',
+                            'full': 'https://placekitten.com/1800/1412',
                             'scaled': 'https://placekitten.com/500/339'
                         }
                     }, 
@@ -39,7 +39,7 @@
                         'imageAlt': '',
                         'imageDescription': 'Product four',
                         'images': {
-                            'full': 'https://placekitten.com/1500/1007',
+                            'full': 'https://placekitten.com/1500/4007',
                             'scaled': 'https://placekitten.com/500/336'
                         }
                     }, 
@@ -48,7 +48,7 @@
                         'imageAlt': '',
                         'imageDescription': 'Product five',
                         'images': {
-                            'full': 'https://placekitten.com/1500/1004',
+                            'full': 'https://placekitten.com/4500/1004',
                             'scaled': 'https://placekitten.com/500/332'
                         }
                     }
@@ -130,18 +130,20 @@
                             <div class="relative flex justify-center w-full h-full">
                                 <div class="flex justify-center w-full h-full">
                                     <div class="absolute flex items-center justify-center h-full" :class="{ 'w-full' : imgzoom == true }" x-data="{ imgzoom: false }">
-                                        <img 
-                                            image-slider-image 
-                                            :src="slide.images.full" 
-                                            loading="lazy"
-                                            tabindex="0" 
-                                            class="max-w-full max-h-full border-4 border-transparent rounded-sm outline-none cursor-zoom-in focus-visible:border-mc-blue-500" 
-                                            :class="{ 'absolute mx-auto inset-0 cursor-zoom-out' : imgzoom == true }" 
-                                            @click="imgzoom = !imgzoom;"
-                                            @click.away="imgzoom = false;"
-                                            @keyup.enter="imgzoom = !imgzoom;"
-                                            @keydown.escape="imgzoom = false;"
-                                        >
+                                        <button class="object-contain w-full h-full focus-visible:border-mc-blue-500 cursor-zoom-in" image-slider-zoom-button>
+                                            <img 
+                                                image-slider-image 
+                                                :src="slide.images.full" 
+                                                loading="lazy"
+                                                class="object-contain max-h-full" 
+                                                :class="{ 'absolute mx-auto inset-0 cursor-zoom-out' : imgzoom == true }" 
+                                                @click="imgzoom = !imgzoom;"
+                                                @click.away="imgzoom = false;"
+                                                @keyup.enter="imgzoom = !imgzoom;"
+                                                @keydown.escape="imgzoom = false;"
+                                            >
+
+                                        </button>
                                     </div>
                                 </div>
                             </div>

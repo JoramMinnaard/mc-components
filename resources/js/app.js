@@ -7,6 +7,9 @@ window.Alpine = Alpine;
 Alpine.start();
 
 function zoomFunctionality(zoom, imageElement) {
+    if (imageElement.getAttribute("image-slider-image") == null) {
+        imageElement = imageElement.children[0];
+    }
     const { naturalWidth: width, naturalHeight: height } = imageElement;
 
     const qs = (selector) => document.querySelector(selector);
@@ -23,13 +26,16 @@ function zoomFunctionality(zoom, imageElement) {
         nextButton: qs("[next-image-button]"),
     };
 
-    imageElement.classList.toggle(`w-[${width}px]`, zoom);
-    imageElement.classList.toggle(`h-[${height}px]`, zoom);
-    imageElement.classList.toggle(`!max-w-[${width}px]`, zoom);
-    imageElement.classList.toggle(`!max-h-[${height}px]`, zoom);
+    // imageElement.classList.toggle(`!w-[${width}px]`, zoom);
+    // imageElement.classList.toggle(`!h-[${height}px]`, zoom);
+    // imageElement.classList.toggle(`!max-w-[${width}px]`, zoom);
+    // imageElement.classList.toggle(`!max-h-[${height}px]`, zoom);
     imageElement.classList.toggle("max-w-full", !zoom);
     imageElement.classList.toggle("max-h-full", !zoom);
     imageElement.style.maxWidth = zoom ? `${width}px` : "100%";
+    imageElement.style.width = zoom ? `${width}px` : "100%";
+    imageElement.style.maxHeight = zoom ? `${height}px` : "100%";
+    imageElement.style.height = zoom ? `${height}px` : "100%";
 
     elements.descriptions?.forEach((description) => {
         toggleClass(description, "hidden", zoom);
@@ -38,10 +44,6 @@ function zoomFunctionality(zoom, imageElement) {
     toggleClass(elements.selection, "hidden", zoom);
     toggleClass(elements.prevButton, "hidden", zoom);
     toggleClass(elements.nextButton, "hidden", zoom);
-}
-
-function addMultipleEventListener(element, events, handler) {
-    events.forEach((event) => element.addEventListener(event, handler));
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -56,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextButton = qs("[next-image-button]");
 
     let images;
+    let imageZoomButtons;
     let description;
 
     const closeModal = () => {
@@ -66,68 +69,55 @@ document.addEventListener("DOMContentLoaded", function () {
     openButtons.forEach((button) => {
         button.addEventListener("click", () => {
             images = qsa("[image-slider-image]");
+            imageZoomButtons = qsa("[image-slider-zoom-button]");
             description = qs("[image-slider-image-description]");
             slider.showModal();
             document.body.classList.add("overflow-y-hidden");
 
-            let zoom = false;
-            images.forEach((image) => {
-                image.addEventListener("click", (imageElement) => {
-                    zoomFunctionality(!zoom, imageElement.target);
-                    zoom = !zoom;
+            // console.log(imageZoomButtons);
+
+            let currentZoomState = false;
+            imageZoomButtons.forEach((imageZoomButton) => {
+                imageZoomButton.addEventListener("click", (imageElement) => {
+                    zoomFunctionality(!currentZoomState, imageElement.target);
+                    currentZoomState = !currentZoomState;
+                });
+
+                imageZoomButton.addEventListener("keyup", (event) => {
+                    let focusedElement = document.activeElement;
+                    // console.log(focusedElement.children[0]);
+                    if (
+                        event.key === "Enter" &&
+                        focusedElement.children[0].getAttribute(
+                            "image-slider-image"
+                        ) == null
+                    ) {
+                        zoomFunctionality(
+                            !currentZoomState,
+                            event.target.children[0]
+                        );
+                        currentZoomState = !currentZoomState;
+                    }
                 });
             });
-
-            console.log(zoom);
-            if (zoom) {
-                document.addEventListener("keyup", (event) => {
-                    console.log(event);
-                });
-            }
         });
     });
 
     closeButton.addEventListener("click", closeModal);
 
-    // Extend the prototype of the Element class
-    Element.prototype.addEventHandlers = function (eventNames, handler) {
-        const events = eventNames
-            .split(",")
-            .map((eventName) => eventName.trim());
-        events.forEach((eventName) => {
-            // console.log(this);
-            switch (eventName) {
-                case "Escape":
-                    this.addEventListener("keyup", (event) => {
-                        console.log(event);
-                        // if (eventName.key === "Escape") {
-                        //     console.log("test");
-                        //     closeModal();
-                        //     let zoom = true;
-                        //     images.forEach((image) => {
-                        //         console.log("image");
-                        //         zoomFunctionality(!zoom, image);
-                        //         zoom = !zoom;
-                        //     });
-                        // }
-                    });
-                    break;
-
-                default:
-                    this.addEventListener(eventName, handler);
-                    break;
-            }
+    slider.addEventListener("close", () => {
+        images.forEach((image) => {
+            zoomFunctionality(false, image);
         });
-    };
-
-    slider.addEventHandlers("Escape", () => {
-        console.log("hello");
     });
 
     slider.addEventListener("click", (event) => {
         const shouldCloseModal =
             !Array.from(images).some((image) =>
                 image?.contains(event.target)
+            ) &&
+            !Array.from(imageZoomButtons).some((imageZoomButton) =>
+                imageZoomButton?.contains(event.target)
             ) &&
             !description?.contains(event.target) &&
             !imageSelection?.contains(event.target) &&
@@ -137,10 +127,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (shouldCloseModal) {
             closeModal();
-            let zoom = true;
             images.forEach((image) => {
-                zoomFunctionality(!zoom, image);
-                zoom = !zoom;
+                zoomFunctionality(false, image);
             });
         }
     });
