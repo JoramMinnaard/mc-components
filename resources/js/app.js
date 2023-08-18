@@ -7,9 +7,7 @@ window.Alpine = Alpine;
 Alpine.start();
 
 function zoomFunctionality(zoom, imageElement) {
-    if (imageElement.getAttribute("image-slider-image") == null) {
-        imageElement = imageElement.children[0];
-    }
+    console.log(imageElement);
     const { naturalWidth: width, naturalHeight: height } = imageElement;
 
     const qs = (selector) => document.querySelector(selector);
@@ -26,16 +24,13 @@ function zoomFunctionality(zoom, imageElement) {
         nextButton: qs("[next-image-button]"),
     };
 
-    // imageElement.classList.toggle(`!w-[${width}px]`, zoom);
-    // imageElement.classList.toggle(`!h-[${height}px]`, zoom);
-    // imageElement.classList.toggle(`!max-w-[${width}px]`, zoom);
-    // imageElement.classList.toggle(`!max-h-[${height}px]`, zoom);
+    imageElement.classList.toggle(`w-[${width}px]`, zoom);
+    imageElement.classList.toggle(`h-[${height}px]`, zoom);
+    imageElement.classList.toggle(`!max-w-[${width}px]`, zoom);
+    imageElement.classList.toggle(`!max-h-[${height}px]`, zoom);
     imageElement.classList.toggle("max-w-full", !zoom);
     imageElement.classList.toggle("max-h-full", !zoom);
     imageElement.style.maxWidth = zoom ? `${width}px` : "100%";
-    imageElement.style.width = zoom ? `${width}px` : "100%";
-    imageElement.style.maxHeight = zoom ? `${height}px` : "100%";
-    imageElement.style.height = zoom ? `${height}px` : "100%";
 
     elements.descriptions?.forEach((description) => {
         toggleClass(description, "hidden", zoom);
@@ -58,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextButton = qs("[next-image-button]");
 
     let images;
-    let imageZoomButtons;
     let description;
 
     const closeModal = () => {
@@ -69,33 +63,27 @@ document.addEventListener("DOMContentLoaded", function () {
     openButtons.forEach((button) => {
         button.addEventListener("click", () => {
             images = qsa("[image-slider-image]");
-            imageZoomButtons = qsa("[image-slider-zoom-button]");
             description = qs("[image-slider-image-description]");
             slider.showModal();
             document.body.classList.add("overflow-y-hidden");
 
-            // console.log(imageZoomButtons);
-
             let currentZoomState = false;
-            imageZoomButtons.forEach((imageZoomButton) => {
-                imageZoomButton.addEventListener("click", (imageElement) => {
+            images.forEach((image) => {
+                image.addEventListener("click", (imageElement) => {
                     zoomFunctionality(!currentZoomState, imageElement.target);
                     currentZoomState = !currentZoomState;
                 });
 
-                imageZoomButton.addEventListener("keyup", (event) => {
+                image.addEventListener("keyup", (event) => {
                     let focusedElement = document.activeElement;
-                    // console.log(focusedElement.children[0]);
+                    // console.log(
+                    //     focusedElement.hasAttribute("image-slider-image")
+                    // );
                     if (
                         event.key === "Enter" &&
-                        focusedElement.children[0].getAttribute(
-                            "image-slider-image"
-                        ) == null
+                        focusedElement.hasAttribute("image-slider-image")
                     ) {
-                        zoomFunctionality(
-                            !currentZoomState,
-                            event.target.children[0]
-                        );
+                        zoomFunctionality(!currentZoomState, event.target);
                         currentZoomState = !currentZoomState;
                     }
                 });
@@ -115,9 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const shouldCloseModal =
             !Array.from(images).some((image) =>
                 image?.contains(event.target)
-            ) &&
-            !Array.from(imageZoomButtons).some((imageZoomButton) =>
-                imageZoomButton?.contains(event.target)
             ) &&
             !description?.contains(event.target) &&
             !imageSelection?.contains(event.target) &&
