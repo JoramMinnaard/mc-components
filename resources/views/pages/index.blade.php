@@ -3,6 +3,7 @@
     <div x-data="{ item: {} }">
 
         <button 
+            class="px-3 py-0.5 border rounded bg-neutral-300 border-mc-blue-500 hover:bg-neutral-100"
             image-slider-open-button
             @click="item = {
                 activeSlideId: 1, 
@@ -59,6 +60,7 @@
         </button>
 
         <button 
+            class="px-3 py-0.5 border rounded bg-neutral-300 border-mc-blue-500 hover:bg-neutral-100"
             image-slider-open-button
             @click="item = {
                 activeSlideId: 1, 
