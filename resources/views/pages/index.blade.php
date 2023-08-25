@@ -143,7 +143,6 @@
                                             :class="{ 'inset-0' : imgzoom == true }" 
                                             @click="imgzoom = !imgzoom;"
                                             @click.away="imgzoom = false;"
-                                            @keyup.enter="imgzoom = !imgzoom;"
                                             @keydown.escape="imgzoom = false;"
                                         >
                                     </div>
