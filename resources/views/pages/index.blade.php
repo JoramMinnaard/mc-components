@@ -6,7 +6,7 @@
             class="px-3 py-0.5 border rounded bg-neutral-300 border-mc-blue-500 hover:bg-neutral-100"
             image-slider-open-button
             @click="item = {
-                activeSlideId: 1, 
+                activeSlideId: 0, 
                 slides: [
                     {
                         'id': 1, 
@@ -63,7 +63,7 @@
             class="px-3 py-0.5 border rounded bg-neutral-300 border-mc-blue-500 hover:bg-neutral-100"
             image-slider-open-button
             @click="item = {
-                activeSlideId: 1, 
+                activeSlideId: 0, 
                 slides: [
                     {
                         'id': 1, 
@@ -120,8 +120,8 @@
     
         <dialog image-slider class="w-screen h-screen max-w-full max-h-full p-0 bg-transparent backdrop:bg-neutral-600/70 backdrop:backdrop-blur-sm">
             <div class="flex flex-col w-full h-full">
-                <template x-for="slide in item.slides" :key="slide.id">
-                    <div class="flex flex-col w-full h-full" x-show="item.activeSlideId === slide.id">
+                <template x-for="(slide, index) in item.slides" :key="index">
+                    <div class="flex flex-col w-full h-full" x-show="item.activeSlideId === index">
                         <div class="absolute left-0 right-0 z-10 mx-auto">
                             <div class="flex justify-center">
                                 <span image-slider-image-description class="py-1.5 px-3 rounded-b backdrop-blur-sm border-x border-neutral-700/50 shadow-md shadow-neutral-700/50 border-b bg-neutral-800/40 text-white" x-text="slide.imageDescription"></span>
@@ -156,7 +156,7 @@
                     type="button" 
                     class="absolute left-0 z-10 h-full outline-none group drop-shadow hover:bg-neutral-700/40 focus-visible:bg-neutral-700/40" 
                     previous-image-button
-                    @click="item.activeSlideId = item.activeSlideId === 1 ? item.slides.length : item.activeSlideId - 1"
+                    @click="item.activeSlideId = item.activeSlideId === 0 ? item.slides.length - 1 : item.activeSlideId - 1"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-16 h-16 stroke-[0.25] sm:bg-transparent bg-neutral-800/20 rounded-r-full stroke-neutral-800/70 fill-white group-focus-visible:fill-mc-blue-500 group-hover:fill-mc-blue-500">
                         <path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z" />
@@ -167,7 +167,7 @@
                     type="button" 
                     class="absolute right-0 z-10 h-full outline-none group drop-shadow hover:bg-neutral-700/40 focus-visible:bg-neutral-700/40" 
                     next-image-button
-                    @click="item.activeSlideId = item.activeSlideId === item.slides.length ? 1 : item.activeSlideId + 1"
+                    @click="item.activeSlideId = (item.activeSlideId + 1) % item.slides.length"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-16 h-16 stroke-[0.25] sm:bg-transparent bg-neutral-800/20 rounded-l-full stroke-neutral-800/70 fill-white group-focus-visible:fill-mc-blue-500 group-hover:fill-mc-blue-500">
                         <path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z" />
@@ -175,14 +175,14 @@
                 </button>
                 
                 <div image-slider-image-selection class="z-10 flex px-1 py-3 overflow-x-auto shadow-md rounded-t-md h-36 shrink-0 flex-nowrap bg-neutral-700/60 backdrop-blur">
-                    <template x-for="slide in item.slides" :key="slide.id">
+                    <template x-for="(slide, index) in item.slides" :key="index">
                         <button
                         class="w-32 h-full mx-2 overflow-hidden border-4 rounded shrink-0"
                         :class="{ 
-                            'border-mc-blue-500 ': item.activeSlideId === slide.id,
-                            'border-neutral-400': item.activeSlideId !== slide.id 
+                            'border-mc-blue-500 ': item.activeSlideId === index,
+                            'border-neutral-400': item.activeSlideId !== index 
                         }" 
-                          @click="item.activeSlideId = slide.id"
+                          @click="item.activeSlideId = index"
                           >
                           <img :src="slide.images.scaled" loading="lazy" alt="" class="object-cover w-full h-full">  
                         </button>
