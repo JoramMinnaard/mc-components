@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const qsa = (selector) => document.querySelectorAll(selector);
         const toggleClass = (element, className, condition) =>
             condition
-                ? element.classList.add(className)
-                : element.classList.remove(className);
+                ? element?.classList.add(className)
+                : element?.classList.remove(className);
 
         const elements = {
             descriptions: qsa("[image-slider-image-description]"),
@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         imageElement.classList.toggle("max-h-full", !zoom);
         imageElement.style.maxWidth = zoom ? `${width}px` : "100%";
         imageElement.style.cursor = zoom ? "zoom-out" : "zoom-in";
+        imageElement.style.marginBottom = zoom ? "1rem" : "0";
 
         imageElement.parentElement.style.position = zoom
             ? "relative"
@@ -101,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
     closeButton.addEventListener("click", closeModal);
 
     slider.addEventListener("close", () => {
-        console.log("Closes");
         images.forEach((image) => {
             zoomFunctionality(false, image);
         });
