@@ -5,132 +5,516 @@
             "displayName": "Age of Sigmar",
             "products": [
                 {
-                    "release_date": "5/27/23",
-                    "ss_code": "103-25",
-                    "name": "KILL TEAM: ASHES OF FAITH (ENG)",
-                    "price": "68.75",
-                    "weight": "1.3998"
+                    "name": "AGE OF SIGMAR: WARRIOR",
+                    "product_code": "60010299029",
+                    "ss_code": "80-15",
+                    "retail_price": 4000,
+                    "activeSlideId": 0,
+                    "images": [
+                        "60010299029_AgeOfSigmarWarrior_0.jpg",
+                        "99120210041_LuminethRldsVanariAuralanSentinels_0.jpg",
+                        "99120207116_NighthauntSpiritHosts_0.jpg",
+                        "99120108045_AdeptaSororitasCelestianSacresants_0.jpg",
+                        "99170199020_40kPaintstoolsGerfreitadutczslv_0.jpg"
+                    ]
                 },
                 {
-                    "release_date": "5/27/23",
-                    "ss_code": "31-61",
-                    "name": "LEGIONES ASTARTES: VINDICATOR SIEGE TANK",
-                    "price": "30.25",
-                    "weight": "0.4026",
-                    "images": {
-                        "full": "https://placekitten.com/1500/1000",
-                        "scaled": "https://placekitten.com/500/300"
-                    }
+                    "name": "AOS PAINTS+TOOLS GER/CH/ITA/DUT/CZE/SLV",
+                    "product_code": "54170299001",
+                    "ss_code": "80-17",
+                    "retail_price": 3500,
+                    "activeSlideId": 0,
+                    "images": [
+                        "54170299001_AosPaintstoolsGerchitadutczeslv_0.jpg",
+                        "54170299001_AosPaintstoolsGerchitadutczeslv_0.jpg",
+                        "54170299001_AosPaintstoolsGerchitadutczeslv_0.jpg",
+                        "54170299001_AosPaintstoolsGerchitadutczeslv_0.jpg",
+                        "54170299001_AosPaintstoolsGerchitadutczeslv_0.jpg",
+                        "54170299001_AosPaintstoolsGerchitadutczeslv_0.jpg",
+                        "54170299001_AosPaintstoolsGerchitadutczeslv_0.jpg"
+                    ]
                 },
                 {
-                    "release_date": "5/20/23",
-                    "ss_code": "112-02",
-                    "name": "WARCRY: ASKURGAN TRUEBLADES",
-                    "price": "27.50",
-                    "weight": "0.2092",
-                    "images": {
-                        "full": "https://cdn.millenniumcomputers.nl/warhammer/full/60010799020_WhUnderworldsStarterSet_0.jpg",
-                        "scaled": "https://cdn.millenniumcomputers.nl/warhammer/scaled/60010799020_WhUnderworldsStarterSet_0.jpg"
-                    }
+                    "name": "AOS S/E + PAINT SET GER/FRE/ITA/DUT/CZ/S",
+                    "product_code": "54170218001",
+                    "ss_code": "60-10",
+                    "retail_price": 3000,
+                    "activeSlideId": 0,
+                    "images": ["54170218001_AosSePaintSetGerfreitadutczs_0.jpg"]
                 },
                 {
-                    "release_date": "5/20/23",
-                    "ss_code": "112-03",
-                    "name": "WARCRY: CLAWS OF KARANAK",
-                    "price": "27.50",
-                    "weight": "0.2174",
-                    "images": {
-                        "full": "https://cdn.millenniumcomputers.nl/warhammer/full/60050799009_WhuVoidcursedThralls_0.jpg",
-                        "scaled": "https://cdn.millenniumcomputers.nl/warhammer/scaled/60050799009_WhuVoidcursedThralls_0.jpg"
-                    }
+                    "name": "GETTING STARTED WITH AGE OF SIGMAR",
+                    "product_code": "60040299112",
+                    "ss_code": "80-16",
+                    "retail_price": 1200,
+                    "activeSlideId": 0,
+                    "images": [
+                        "60040299112_GettingStartedWithAgeOfSigmar_0.jpg"
+                    ]
                 },
                 {
-                    "release_date": "5/20/23",
-                    "ss_code": "112-04",
-                    "name": "WARCRY: NIGHTMARE QUEST (ENGLISH)",
-                    "price": "79.75",
-                    "weight": "1.9463",
-                    "images": {
-                        "full": "https://cdn.millenniumcomputers.nl/warhammer/full/60120707007_WhuTheHeadsmensCurse_0.jpg",
-                        "scaled": "https://cdn.millenniumcomputers.nl/warhammer/scaled/60120707007_WhuTheHeadsmensCurse_0.jpg"
-                    }
+                    "name": "KHARADRON OVERLORDS: ARKANAUT COMPANY",
+                    "product_code": "99120205052",
+                    "ss_code": "84-35",
+                    "retail_price": 4500,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120205052_KharadronOverlordsArkanautCompany_0.jpg"
+                    ]
                 },
                 {
-                    "release_date": "5/20/23",
-                    "ss_code": "BL3069",
-                    "name": "PRINCE MAESA (PB)",
-                    "price": "7.50",
-                    "weight": "0.239",
-                    "images": {
-                        "full": "https://placekitten.com/1500/1000",
-                        "scaled": "https://placekitten.com/500/300"
-                    }
+                    "name": "LUMINETH: VANARI AURALAN SENTINELS",
+                    "product_code": "99120210059",
+                    "ss_code": "87-58",
+                    "retail_price": 5000,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120210041_LuminethRldsVanariAuralanSentinels_0.jpg"
+                    ]
+                },
+                {
+                    "name": "NIGHTHAUNT: SPIRIT HOSTS",
+                    "product_code": "99120207116",
+                    "ss_code": "93-08",
+                    "retail_price": 2400,
+                    "activeSlideId": 0,
+                    "images": ["99120207116_NighthauntSpiritHosts_0.jpg"]
                 }
             ]
         },
         {
-            "tag": "wh40k",
-            "displayName": "Warhammer 40K",
+            "tag": "40k",
+            "displayName": "Warhammer 40k",
             "products": [
                 {
-                    "release_date": "5/20/23",
-                    "ss_code": "BL3090",
-                    "name": "GOTREK GURNISSON: BLIGHTSLAYER (HB)",
-                    "price": "13.20",
-                    "weight": "0.655",
-                    "category_id": 2,
-                    "images": {
-                        "full": "https://placekitten.com/1500/1000",
-                        "scaled": "https://placekitten.com/500/300"
-                    }
+                    "name": "40K PAINTS+TOOLS GER/FRE/ITA/DUT/CZ/SLV",
+                    "product_code": "99170199020",
+                    "ss_code": "60-12",
+                    "retail_price": 3500,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99170199020_40kPaintstoolsGerfreitadutczslv_0.jpg"
+                    ]
                 },
                 {
-                    "release_date": "5/19/23",
-                    "ss_code": "WD05-60",
-                    "name": "WHITE DWARF 488 (MAY-23) (ENGLISH)",
-                    "price": "5.40",
-                    "weight": "0.419",
-                    "category_id": 2,
-                    "images": {
-                        "full": "https://placekitten.com/1500/1000",
-                        "scaled": "https://placekitten.com/500/300"
-                    }
+                    "name": "A/MILITARUM: CADIAN HEAVY WEAPONS SQUAD",
+                    "product_code": "99120105097",
+                    "ss_code": "47-19",
+                    "retail_price": 4000,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120105097_AmilitarumCadianHeavyWeaponsSquad_0.jpg"
+                    ]
                 },
                 {
-                    "release_date": "-",
-                    "ss_code": "01-01",
-                    "name": "MIDDLE-EARTH SBG RULES MANUAL 2022 (ENG)",
-                    "price": "30.00",
-                    "weight": "1.092",
-                    "category_id": 2,
-                    "images": {
-                        "full": "https://placekitten.com/1500/1000",
-                        "scaled": "https://placekitten.com/500/300"
-                    }
+                    "name": "ADEPTA SORORITAS CELESTIAN SACRESANTS",
+                    "product_code": "99120108045",
+                    "ss_code": "52-35",
+                    "retail_price": 5000,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120108045_AdeptaSororitasCelestianSacresants_0.jpg"
+                    ]
                 },
                 {
-                    "release_date": "-",
-                    "ss_code": "01-02-60",
-                    "name": "ARMIES OF THE LORD OF THE RINGS (ENG)",
-                    "price": "30.00",
-                    "weight": "1.1248",
-                    "category_id": 2,
-                    "images": {
-                        "full": "https://placekitten.com/1500/1000",
-                        "scaled": "https://placekitten.com/500/300"
-                    }
+                    "name": "ADEPTA SORORITAS: BATTLE SISTERS SQUAD",
+                    "product_code": "99120108057",
+                    "ss_code": "52-20",
+                    "retail_price": 5000,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120108057_AdeptaSororitasBattleSistersSquad_0.jpg"
+                    ]
                 },
                 {
-                    "release_date": "-",
-                    "ss_code": "01-07",
-                    "name": "ADEPTUS CUSTODES: CUSTODIAN GUARD",
-                    "price": "27.50",
-                    "weight": "0.158",
-                    "category_id": 2,
-                    "images": {
-                        "full": "https://placekitten.com/1500/1000",
-                        "scaled": "https://placekitten.com/500/300"
-                    }
+                    "name": "ADEPTA SORORITAS: RETRIBUTOR SQUAD",
+                    "product_code": "99120108062",
+                    "ss_code": "52-25",
+                    "retail_price": 5000,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120108062_AdeptaSororitasRetributorSquad_0.jpg"
+                    ]
+                },
+                {
+                    "name": "ADEPTUS CUSTODES: CUSTODIAN WARDENS",
+                    "product_code": "99120108077",
+                    "ss_code": "01-11",
+                    "retail_price": 5000,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120108077_AdeptusCustodesCustodianWardens_0.jpg"
+                    ]
+                },
+                {
+                    "name": "ADEPTUS MECHANICUS: IRONSTRIDER",
+                    "product_code": "99120116034",
+                    "ss_code": "59-12",
+                    "retail_price": 5000,
+                    "activeSlideId": 0,
+                    "images": ["99120116034_AdeptusMechanicusIronstrider_0.jpg"]
+                },
+                {
+                    "name": "ADEPTUS MECHANICUS: SKITARII",
+                    "product_code": "99120116033",
+                    "ss_code": "59-10",
+                    "retail_price": 4250,
+                    "activeSlideId": 0,
+                    "images": ["99120116033_AdeptusMechanicusSkitarii_0.jpg"]
+                },
+                {
+                    "name": "ASSAULT INT+PAINT GER/FRE/ITA/DUT/CZ/SLV",
+                    "product_code": "99170101014",
+                    "ss_code": "60-11",
+                    "retail_price": 3000,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99170101014_AssaultIntpaintGerfreitadutczslv_0.jpg"
+                    ]
+                },
+                {
+                    "name": "ASTRA MILITARUM LEMAN RUSS BATTLE TANK",
+                    "product_code": "99120105111",
+                    "ss_code": "47-06",
+                    "retail_price": 5500,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120105111_AstraMilitarumLemanRussBattleTank_0.jpg"
+                    ]
+                },
+                {
+                    "name": "ASTRA MILITARUM: CADIAN COMMAND SQUAD",
+                    "product_code": "99120105102",
+                    "ss_code": "47-09",
+                    "retail_price": 3500,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120105102_AstraMilitarumCadianCommandSquad_0.jpg"
+                    ]
+                },
+                {
+                    "name": "ASTRA MILITARUM: CADIAN SHOCK TROOPS",
+                    "product_code": "99120105101",
+                    "ss_code": "47-33",
+                    "retail_price": 4000,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120105089_AstraMilitarumCadianShockTroops_0.jpg"
+                    ]
+                },
+                {
+                    "name": "ASTRA MILITARUM: SENTINEL",
+                    "product_code": "99120105103",
+                    "ss_code": "47-12",
+                    "retail_price": 3500,
+                    "activeSlideId": 0,
+                    "images": ["99120105103_AstraMilitarumSentinel_0.jpg"]
+                },
+                {
+                    "name": "CHAOS SPACE MARINES: DARK APOSTLE",
+                    "product_code": "99120102173",
+                    "ss_code": "43-37",
+                    "retail_price": 3250,
+                    "activeSlideId": 0,
+                    "images": ["99120102173_ChaosSpaceMarinesDarkApostle_0.jpg"]
+                },
+                {
+                    "name": "CHAOS SPACE MARINES: LEGIONARIES",
+                    "product_code": "99120102172",
+                    "ss_code": "43-06",
+                    "retail_price": 5500,
+                    "activeSlideId": 0,
+                    "images": ["99120102172_ChaosSpaceMarinesLegionaries_0.jpg"]
+                },
+                {
+                    "name": "CHAOS SPACE MARINES: RAPTORS",
+                    "product_code": "99120102163",
+                    "ss_code": "43-13",
+                    "retail_price": 3500,
+                    "activeSlideId": 0,
+                    "images": ["99120102163_ChaosSpaceMarinesRaptors_0.jpg"]
+                },
+                {
+                    "name": "CHAOS SPACE MARINES: TERMINATORS",
+                    "product_code": "99120102171",
+                    "ss_code": "43-19",
+                    "retail_price": 5000,
+                    "activeSlideId": 0,
+                    "images": ["99120102171_ChaosSpaceMarinesTerminators_0.jpg"]
+                },
+                {
+                    "name": "COMBAT PATROL: ADEPTA SORORITAS",
+                    "product_code": "99120108044",
+                    "ss_code": "52-30",
+                    "retail_price": 12500,
+                    "activeSlideId": 0,
+                    "images": ["99120108044_CombatPatrolAdeptaSororitas_0.jpg"]
+                },
+                {
+                    "name": "COMBAT PATROL: ORKS",
+                    "product_code": "99120103081",
+                    "ss_code": "50-43",
+                    "retail_price": 12500,
+                    "activeSlideId": 0,
+                    "images": ["99120103081_CombatPatrolOrks_0.jpg"]
+                },
+                {
+                    "name": "DEATH GUARD: MYPHITIC BLIGHT-HAULER",
+                    "product_code": "99120102112",
+                    "ss_code": "43-56",
+                    "retail_price": 2200,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120102112_DeathGuardMyphiticBlighthauler_0.jpg"
+                    ]
+                },
+                {
+                    "name": "DEATH GUARD: PLAGUEBURST CRAWLER",
+                    "product_code": "99120102125",
+                    "ss_code": "43-52",
+                    "retail_price": 6000,
+                    "activeSlideId": 0,
+                    "images": ["99120102125_DeathGuardPlagueburstCrawler_0.jpg"]
+                },
+                {
+                    "name": "DRUKHARI KABALITE WARRIORS",
+                    "product_code": "99120112045",
+                    "ss_code": "45-07",
+                    "retail_price": 3500,
+                    "activeSlideId": 0,
+                    "images": ["99120112045_DrukhariKabaliteWarriors_0.jpg"]
+                },
+                {
+                    "name": "GETTING STARTED WITH WARHAMMER 40K",
+                    "product_code": "60040199169",
+                    "ss_code": "40-06",
+                    "retail_price": 1500,
+                    "activeSlideId": 0,
+                    "images": [
+                        "60040199169_GettingStartedWithWarhammer40k_0.jpg"
+                    ]
+                },
+                {
+                    "name": "GETTING STARTED WITH WARHAMMER 40K",
+                    "product_code": "60040199131",
+                    "ss_code": "40-06",
+                    "retail_price": 1200,
+                    "activeSlideId": 0,
+                    "images": [
+                        "60040199131_GettingStartedWithWarhammer40k_0.jpg"
+                    ]
+                },
+                {
+                    "name": "IMPERIAL KNIGHTS: KNIGHT ARMIGERS",
+                    "product_code": "99120108080",
+                    "ss_code": "54-20",
+                    "retail_price": 7000,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120108080_ImperialKnightsKnightArmigers_0.jpg"
+                    ]
+                },
+                {
+                    "name": "IMPERIAL KNIGHTS: KNIGHT QUESTORIS",
+                    "product_code": "99120108082",
+                    "ss_code": "54-15",
+                    "retail_price": 14000,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120108082_ImperialKnightsKnightQuestoris_0.jpg"
+                    ]
+                },
+                {
+                    "name": "INFER S/M + PAINTS GER/FRE/ITA/DUT/CZ/SL",
+                    "product_code": "54170101001",
+                    "ss_code": "60-11",
+                    "retail_price": 3000,
+                    "activeSlideId": 0,
+                    "images": [
+                        "54170101001_InferSmPaintsGerfreitadutczsl_0.jpg"
+                    ]
+                },
+                {
+                    "name": "NECRONS LOKHUSTS HEAVY DESTROYER",
+                    "product_code": "99120110044",
+                    "ss_code": "49-28",
+                    "retail_price": 3000,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120110044_NecronsLokhustsHeavyDestroyer_0.jpg"
+                    ]
+                },
+                {
+                    "name": "NECRONS: IMMORTALS",
+                    "product_code": "99120110057",
+                    "ss_code": "49-10",
+                    "retail_price": 3500,
+                    "activeSlideId": 0,
+                    "images": ["99120110057_NecronsImmortals_0.jpg"]
+                },
+                {
+                    "name": "ORKS: BOYZ",
+                    "product_code": "99120103091",
+                    "ss_code": "50-10",
+                    "retail_price": 3500,
+                    "activeSlideId": 0,
+                    "images": ["99120103091_OrksBoyz_0.jpg"]
+                },
+                {
+                    "name": "ORKS: RUNTHERD AND GRETCHIN",
+                    "product_code": "99120103092",
+                    "ss_code": "50-16",
+                    "retail_price": 2000,
+                    "activeSlideId": 0,
+                    "images": ["99120103092_OrksRuntherdAndGretchin_0.jpg"]
+                },
+                {
+                    "name": "S/MARINES PRIMARIS REDEMPTOR DREADNOUGHT",
+                    "product_code": "99120101310",
+                    "ss_code": "48-77",
+                    "retail_price": 6000,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120101310_SmarinesPrimarisRedemptorDreadnought_0.jpg"
+                    ]
+                },
+                {
+                    "name": "S/MARINES PRIMARIS REPULSOR EXECUTIONER",
+                    "product_code": "99120101322",
+                    "ss_code": "48-55",
+                    "retail_price": 8750,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120101322_SmarinesPrimarisRepulsorExecutioner_0.jpg"
+                    ]
+                },
+                {
+                    "name": "SPACE MARINES BLADEGUARD VETERANS",
+                    "product_code": "99120101284",
+                    "ss_code": "48-44",
+                    "retail_price": 4500,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120101284_SpaceMarinesBladeguardVeterans_0.jpg"
+                    ]
+                },
+                {
+                    "name": "SPACE MARINES DEVASTATOR SQUAD",
+                    "product_code": "99120101317",
+                    "ss_code": "48-15",
+                    "retail_price": 5000,
+                    "activeSlideId": 0,
+                    "images": ["99120101317_SpaceMarinesDevastatorSquad_0.jpg"]
+                },
+                {
+                    "name": "SPACE MARINES PRIMARIS ELIMINATORS",
+                    "product_code": "99120101323",
+                    "ss_code": "48-93",
+                    "retail_price": 4500,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120101323_SpaceMarinesPrimarisEliminators_0.jpg"
+                    ]
+                },
+                {
+                    "name": "SPACE MARINES PRIMARIS INTERCESSORS",
+                    "product_code": "99120101309",
+                    "ss_code": "48-75",
+                    "retail_price": 5000,
+                    "activeSlideId": 0,
+                    "images": [
+                        "99120101309_SpaceMarinesPrimarisIntercessors_0.jpg"
+                    ]
+                },
+                {
+                    "name": "SPACE MARINES RAZORBACK",
+                    "product_code": "99120101319",
+                    "ss_code": "48-21",
+                    "retail_price": 4250,
+                    "activeSlideId": 0,
+                    "images": ["99120101319_SpaceMarinesRazorback_0.jpg"]
+                },
+                {
+                    "name": "SPACE MARINES TACTICAL SQUAD",
+                    "product_code": "99120101316",
+                    "ss_code": "48-07",
+                    "retail_price": 4500,
+                    "activeSlideId": 0,
+                    "images": ["99120101316_SpaceMarinesTacticalSquad_0.jpg"]
+                },
+                {
+                    "name": "T'AU EMPIRE: BROADSIDE BATTLESUIT",
+                    "product_code": "99120113082",
+                    "ss_code": "56-15",
+                    "retail_price": 5000,
+                    "activeSlideId": 0,
+                    "images": ["99120113082_TauEmpireBroadsideBattlesuit_0.jpg"]
+                },
+                {
+                    "name": "T'AU EMPIRE: COMMANDER",
+                    "product_code": "99120113079",
+                    "ss_code": "56-22",
+                    "retail_price": 5000,
+                    "activeSlideId": 0,
+                    "images": ["99120113079_TauEmpireCommander_0.jpg"]
+                },
+                {
+                    "name": "T'AU EMPIRE: PATHFINDER TEAM",
+                    "product_code": "99120113080",
+                    "ss_code": "56-09",
+                    "retail_price": 3500,
+                    "activeSlideId": 0,
+                    "images": ["99120113080_TauEmpirePathfinderTeam_0.jpg"]
+                },
+                {
+                    "name": "T'AU EMPIRE: STEALTH BATTLESUITS",
+                    "product_code": "99120113081",
+                    "ss_code": "56-14",
+                    "retail_price": 3000,
+                    "activeSlideId": 0,
+                    "images": ["99120113081_TauEmpireStealthBattlesuits_0.jpg"]
+                },
+                {
+                    "name": "THOUSAND SONS: RUBRIC MARINES",
+                    "product_code": "99120102130",
+                    "ss_code": "43-35",
+                    "retail_price": 5000,
+                    "activeSlideId": 0,
+                    "images": ["99120102130_ThousandSonsRubricMarines_0.jpg"]
+                },
+                {
+                    "name": "TYRANIDS: HIVE TYRANT",
+                    "product_code": "99120106060",
+                    "ss_code": "51-08",
+                    "retail_price": 5000,
+                    "activeSlideId": 0,
+                    "images": ["99120106060_TyranidsHiveTyrant_0.jpg"]
+                },
+                {
+                    "name": "WARHAMMER 40000: INTRODUCTORY SET",
+                    "product_code": "60010199059",
+                    "ss_code": "40-04",
+                    "retail_price": 5500,
+                    "activeSlideId": 0,
+                    "images": [
+                        "60010199059_Warhammer40000IntroductorySet_0.jpg"
+                    ]
+                },
+                {
+                    "name": "WARHAMMER 40000: RECRUIT",
+                    "product_code": "60010199032",
+                    "ss_code": "40-04",
+                    "retail_price": 4000,
+                    "activeSlideId": 0,
+                    "images": ["60010199032_Warhammer40000Recruit_0.jpg"]
+                },
+                {
+                    "name": "WORLD EATERS: KHORNE BERSERKERS",
+                    "product_code": "99120102153",
+                    "ss_code": "43-10",
+                    "retail_price": 5500,
+                    "activeSlideId": 0,
+                    "images": ["99120102153_WorldEatersKhorneBerserkers_0.jpg"]
                 }
             ]
         },
@@ -139,40 +523,252 @@
             "displayName": "Verf",
             "products": [
                 {
-                    "release_date": "-",
-                    "ss_code": "01-08",
-                    "name": "ADEPTUS CUSTODES: SISTERS OF SILENCE",
-                    "price": "24.75",
-                    "weight": "0.1183",
-                    "category_id": 3,
-                    "images": {
-                        "full": "https://placekitten.com/1500/1000",
-                        "scaled": "https://placekitten.com/500/300"
-                    }
+                    "name": "ABADDON BLACK",
+                    "product_code": "9918995023206",
+                    "ss_code": "21-25",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995002506_AbaddonBlack_0.png"]
                 },
                 {
-                    "release_date": "-",
-                    "ss_code": "01-10",
-                    "name": "ADEPTUS CUSTODES: TRAJANN VALORIS",
-                    "price": "19.25",
-                    "weight": "0.077",
-                    "category_id": 3,
-                    "images": {
-                        "full": "https://placekitten.com/1500/1000",
-                        "scaled": "https://placekitten.com/500/300"
-                    }
+                    "name": "BASE: AVERLAND SUNSET",
+                    "product_code": "9918995020806",
+                    "ss_code": "21-01",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995000106_BaseAverlandSunset_0.png"]
                 },
                 {
-                    "release_date": "-",
-                    "ss_code": "01-11",
-                    "name": "ADEPTUS CUSTODES: CUSTODIAN WARDENS",
-                    "price": "27.50",
-                    "weight": "0.19",
-                    "category_id": 3,
-                    "images": {
-                        "full": "https://placekitten.com/1500/1000",
-                        "scaled": "https://placekitten.com/500/300"
-                    }
+                    "name": "BASE: CORAX WHITE",
+                    "product_code": "9918995025806",
+                    "ss_code": "21-52",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995017206_BaseCoraxWhite_0.png"]
+                },
+                {
+                    "name": "BASE: RUNELORD BRASS",
+                    "product_code": "9918995026106",
+                    "ss_code": "21-55",
+                    "retail_price": 480,
+                    "activeSlideId": 0,
+                    "images": ["9918995026106_BaseRunelordBrass_0.png"]
+                },
+                {
+                    "name": "BASE: WRAITHBONE",
+                    "product_code": "9918995025906",
+                    "ss_code": "21-53",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995017306_BaseWraithbone_0.png"]
+                },
+                {
+                    "name": "CELESTRA GREY",
+                    "product_code": "9918995023306",
+                    "ss_code": "21-26",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995023306_CelestraGrey_0.png"]
+                },
+                {
+                    "name": "CHAOS BLACK SPRAY",
+                    "product_code": "8020999907706",
+                    "ss_code": "62-02",
+                    "retail_price": 1535,
+                    "activeSlideId": 0,
+                    "images": ["8020999907706_ChaosBlackSpray(roEurope)_0.png"]
+                },
+                {
+                    "name": "CONTRAST: BLOOD ANGELS RED",
+                    "product_code": "9918996009806",
+                    "ss_code": "29-12",
+                    "retail_price": 630,
+                    "activeSlideId": 0,
+                    "images": ["9918996000306_ContrastBloodAngelsRed_0.png"]
+                },
+                {
+                    "name": "CONTRAST: GUILLIMAN FLESH",
+                    "product_code": "9918996011806",
+                    "ss_code": "29-32",
+                    "retail_price": 630,
+                    "activeSlideId": 0,
+                    "images": ["9918996011806_ContrastGuillimanFlesh_0.png"]
+                },
+                {
+                    "name": "CONTRAST: IYANDEN YELLOW",
+                    "product_code": "9918996009606",
+                    "ss_code": "29-10",
+                    "retail_price": 630,
+                    "activeSlideId": 0,
+                    "images": ["9918996009606_ContrastIyandenYellow_0.png"]
+                },
+                {
+                    "name": "CONTRAST: SKELETON HORDE",
+                    "product_code": "9918996011206",
+                    "ss_code": "29-26",
+                    "retail_price": 630,
+                    "activeSlideId": 0,
+                    "images": ["9918996011206_ContrastSkeletonHorde_0.png"]
+                },
+                {
+                    "name": "CONTRAST: ULTRAMARINES BLUE",
+                    "product_code": "9918996010406",
+                    "ss_code": "29-18",
+                    "retail_price": 630,
+                    "activeSlideId": 0,
+                    "images": ["9918996000906_ContrastUltramarinesBlue_0.png"]
+                },
+                {
+                    "name": "KANTOR BLUE",
+                    "product_code": "9918995021406",
+                    "ss_code": "21-07",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995021406_KantorBlue_0.png"]
+                },
+                {
+                    "name": "KHORNE RED",
+                    "product_code": "9918995021106",
+                    "ss_code": "21-04",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995021106_KhorneRed_0.png"]
+                },
+                {
+                    "name": "KISLEV FLESH",
+                    "product_code": "9918995124206",
+                    "ss_code": "22-37",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995124206_KislevFlesh_0.png"]
+                },
+                {
+                    "name": "LAYER: STORMHOST SILVER",
+                    "product_code": "9918995127806",
+                    "ss_code": "22-75",
+                    "retail_price": 480,
+                    "activeSlideId": 0,
+                    "images": ["9918995127806_LayerStormhostSilver_0.png"]
+                },
+                {
+                    "name": "LEADBELCHER",
+                    "product_code": "9918995023506",
+                    "ss_code": "21-28",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995002806_Leadbelcher_0.png"]
+                },
+                {
+                    "name": "MACRAGGE BLUE",
+                    "product_code": "9918995021506",
+                    "ss_code": "21-08",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995000806_MacraggeBlue_0.png"]
+                },
+                {
+                    "name": "MEPHISTON RED",
+                    "product_code": "9918995021006",
+                    "ss_code": "21-03",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995000306_MephistonRed_0.png"]
+                },
+                {
+                    "name": "MOURNFANG BROWN",
+                    "product_code": "9918995022706",
+                    "ss_code": "21-20",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995002006_MournfangBrown_0.png"]
+                },
+                {
+                    "name": "NECRON COMPOUND",
+                    "product_code": "9918995204806",
+                    "ss_code": "23-13",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995201306_NecronCompound_0.png"]
+                },
+                {
+                    "name": "RETRIBUTOR ARMOUR",
+                    "product_code": "9918995024006",
+                    "ss_code": "21-35",
+                    "retail_price": 480,
+                    "activeSlideId": 0,
+                    "images": ["9918995024006_RetributorArmour_0.png"]
+                },
+                {
+                    "name": "SHADE: AGRAX EARTHSHADE",
+                    "product_code": "9918995305006",
+                    "ss_code": "24-15",
+                    "retail_price": 630,
+                    "activeSlideId": 0,
+                    "images": ["9918995305006_ShadeAgraxEarthshade_0.png"]
+                },
+                {
+                    "name": "SHADE: BIEL-TAN GREEN",
+                    "product_code": "9918995305106",
+                    "ss_code": "24-19",
+                    "retail_price": 630,
+                    "activeSlideId": 0,
+                    "images": ["9918995305106_ShadeBieltanGreen_0.png"]
+                },
+                {
+                    "name": "SHADE: DRAKENHOF NIGHTSHADE",
+                    "product_code": "9918995305306",
+                    "ss_code": "24-17",
+                    "retail_price": 630,
+                    "activeSlideId": 0,
+                    "images": ["9918995305306_ShadeDrakenhofNightshade_0.png"]
+                },
+                {
+                    "name": "SHADE: NULN OIL",
+                    "product_code": "9918995304806",
+                    "ss_code": "24-14",
+                    "retail_price": 630,
+                    "activeSlideId": 0,
+                    "images": ["9918995304806_ShadeNulnOil_0.png"]
+                },
+                {
+                    "name": "TECHNICAL: STIRLAND MUD",
+                    "product_code": "9918995607206",
+                    "ss_code": "27-26",
+                    "retail_price": 630,
+                    "activeSlideId": 0,
+                    "images": ["9918995604206_TechnicalStirlandMud_0.png"]
+                },
+                {
+                    "name": "THE FANG",
+                    "product_code": "9918995023806",
+                    "ss_code": "21-32",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995023806_TheFang_0.png"]
+                },
+                {
+                    "name": "WAAAGH! FLESH",
+                    "product_code": "9918995022006",
+                    "ss_code": "21-13",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995001306_WaaaghFlesh_0.png"]
+                },
+                {
+                    "name": "WARPLOCK BRONZE",
+                    "product_code": "9918995023706",
+                    "ss_code": "21-31",
+                    "retail_price": 360,
+                    "activeSlideId": 0,
+                    "images": ["9918995023706_WarplockBronze_0.png"]
+                },
+                {
+                    "name": "WRAITHBONE SPRAY",
+                    "product_code": "8020999907906",
+                    "ss_code": "62-33",
+                    "retail_price": 1785,
+                    "activeSlideId": 0,
+                    "images": ["8020999907906_WraithboneSpray(roEurope)_0.png"]
                 }
             ]
         },
@@ -181,40 +777,108 @@
             "displayName": "Diverse",
             "products": [
                 {
-                    "release_date": "-",
-                    "ss_code": "01-12",
-                    "name": "ADEPTUS CUSTODES: VERTUS PRAETORS",
-                    "price": "27.50",
-                    "weight": "0.276",
-                    "category_id": 4,
-                    "images": {
-                        "full": "https://placekitten.com/1500/1000",
-                        "scaled": "https://placekitten.com/500/300"
-                    }
+                    "name": "CITADEL 12mm DICE SET",
+                    "product_code": "9922999914206",
+                    "ss_code": "65-36",
+                    "retail_price": 950,
+                    "activeSlideId": 0,
+                    "images": ["9922999914206_Citadel12mmDiceSet_0.jpg"]
                 },
                 {
-                    "release_date": "-",
-                    "ss_code": "01-13",
-                    "name": "ADEPTUS CUSTODES: ALLARUS CUSTODIANS",
-                    "price": "24.75",
-                    "weight": "0.183",
-                    "category_id": 4,
-                    "images": {
-                        "full": "https://placekitten.com/1500/1000",
-                        "scaled": "https://placekitten.com/500/300"
-                    }
+                    "name": "CITADEL MEDIUM LAYER BRUSH",
+                    "product_code": "9919999905306",
+                    "ss_code": "63-22",
+                    "retail_price": 930,
+                    "activeSlideId": 0,
+                    "images": ["9919999905306_CitadelMediumLayerBrush_0.png"]
                 },
                 {
-                    "release_date": "-",
-                    "ss_code": "01-15",
-                    "name": "DATACARDS: ADEPTUS CUSTODES (ENG)",
-                    "price": "12.10",
-                    "weight": "0.1324",
-                    "category_id": 4,
-                    "images": {
-                        "full": "https://placekitten.com/1500/1000",
-                        "scaled": "https://placekitten.com/500/300"
-                    }
+                    "name": "CITADEL PAINTING HANDLE",
+                    "product_code": "9923999911206",
+                    "ss_code": "66-09",
+                    "retail_price": 900,
+                    "activeSlideId": 0,
+                    "images": ["9923999911206_CitadelPaintingHandle_0.jpg"]
+                },
+                {
+                    "name": "CITADEL SKULLS",
+                    "product_code": "99129999012",
+                    "ss_code": "64-29",
+                    "retail_price": 2500,
+                    "activeSlideId": 0,
+                    "images": ["99129999012_CitadelSkulls_0.jpg"]
+                },
+                {
+                    "name": "CITADEL SMALL BASE BRUSH",
+                    "product_code": "9919999904303",
+                    "ss_code": "63-12",
+                    "retail_price": 715,
+                    "activeSlideId": 0,
+                    "images": ["9919999904303_CitadelSmallBaseBrush_0.png"]
+                },
+                {
+                    "name": "CITADEL SMALL LAYER BRUSH",
+                    "product_code": "9919999905206",
+                    "ss_code": "63-21",
+                    "retail_price": 860,
+                    "activeSlideId": 0,
+                    "images": ["9919999905206_CitadelSmallLayerBrush_0.png"]
+                },
+                {
+                    "name": "CITADEL TOOLS: KNIFE",
+                    "product_code": "99239999117",
+                    "ss_code": "66-61",
+                    "retail_price": 2400,
+                    "activeSlideId": 0,
+                    "images": ["99239999117_CitadelToolsKnife_0.jpg"]
+                },
+                {
+                    "name": "PLASTIC GLUE",
+                    "product_code": "9921999903710",
+                    "ss_code": "66-53-99",
+                    "retail_price": 700,
+                    "activeSlideId": 0,
+                    "images": ["9921999903710_PlasticGlue_0.png"]
+                },
+                {
+                    "name": "SUPER FINE DETAIL CUTTERS",
+                    "product_code": "99239999122",
+                    "ss_code": "66-63",
+                    "retail_price": 4000,
+                    "activeSlideId": 0,
+                    "images": ["99239999122_SuperFineDetailCutters_0.jpg"]
+                },
+                {
+                    "name": "WH UNDERWORLDS: HEXBANE'S HUNTERS",
+                    "product_code": "60120702001",
+                    "ss_code": "109-16",
+                    "retail_price": 3400,
+                    "activeSlideId": 0,
+                    "images": ["60120702001_WhUnderworldsHexbanesHunters_0.jpg"]
+                },
+                {
+                    "name": "WH UNDERWORLDS: STARTER SET",
+                    "product_code": "60010799020",
+                    "ss_code": "110-01",
+                    "retail_price": 5000,
+                    "activeSlideId": 0,
+                    "images": ["60010799020_WhUnderworldsStarterSet_0.jpg"]
+                },
+                {
+                    "name": "WH UNDERWORLDS: THE EXILED DEAD",
+                    "product_code": "60120707005",
+                    "ss_code": "109-12",
+                    "retail_price": 3400,
+                    "activeSlideId": 0,
+                    "images": ["60120707005_WhUnderworldsTheExiledDead_0.jpg"]
+                },
+                {
+                    "name": "WHU: GRINKRAK'S LOONCOURT",
+                    "product_code": "60120709006",
+                    "ss_code": "109-05",
+                    "retail_price": 3400,
+                    "activeSlideId": 0,
+                    "images": ["60120709006_WhuGrinkraksLooncourt_0.jpg"]
                 }
             ]
         }

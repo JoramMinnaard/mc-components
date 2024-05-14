@@ -1,201 +1,542 @@
 <x-app-layout page-title="Home |">
 
-    <div x-data="{ item: {} }">
-
-        <button 
-            class="px-3 py-0.5 border rounded bg-neutral-300 border-mc-blue-500 hover:bg-neutral-100"
-            image-slider-open-button
-            @click="item = {
-                activeSlideId: 0, 
-                slides: [
-                    {
-                        'id': 1, 
-                        'imageAlt': '',
-                        'imageDescription': 'Product one',
-                        'images': {
-                            'full': 'https://cdn.millenniumcomputers.nl/warhammer/full/60010799020_WhUnderworldsStarterSet_0.jpg',
-                            'scaled': 'https://cdn.millenniumcomputers.nl/warhammer/scaled/60010799020_WhUnderworldsStarterSet_0.jpg'
-                        }
-                    }, 
-                    {
-                        'id': 2, 
-                        'imageAlt': '',
-                        'imageDescription': 'Product two',
-                        'images': {
-                            'full': 'https://placekitten.com/2500/2001',
-                            'scaled': 'https://placekitten.com/500/334'
-                        }
-                    }, 
-                    {
-                        'id': 3, 
-                        'imageAlt': '',
-                        'imageDescription': 'Product three',
-                        'images': {
-                            'full': 'https://placekitten.com/1500/1012',
-                            'scaled': 'https://placekitten.com/500/339'
-                        }
-                    }, 
-                    {
-                        'id': 4, 
-                        'imageAlt': '',
-                        'imageDescription': 'Product four',
-                        'images': {
-                            'full': 'https://placekitten.com/1500/1007',
-                            'scaled': 'https://placekitten.com/500/336'
-                        }
-                    }, 
-                    {
-                        'id': 5, 
-                        'imageAlt': '',
-                        'imageDescription': 'Product five',
-                        'images': {
-                            'full': 'https://placekitten.com/1500/1004',
-                            'scaled': 'https://placekitten.com/500/332'
-                        }
-                    }
-                ]
-            }"
-        >
-            Product
-        </button>
-
-        <button 
-            class="px-3 py-0.5 border rounded bg-neutral-300 border-mc-blue-500 hover:bg-neutral-100"
-            image-slider-open-button
-            @click="item = {
-                activeSlideId: 0, 
-                slides: [
-                    {
-                        'id': 1, 
-                        'imageAlt': '',
-                        'imageDescription': 'Item one',
-                        'images': {
-                            'full': 'https://cdn.millenniumcomputers.nl/warhammer/full/60010799020_WhUnderworldsStarterSet_0.jpg',
-                            'scaled': 'https://cdn.millenniumcomputers.nl/warhammer/scaled/60010799020_WhUnderworldsStarterSet_0.jpg'
-                        }
-                    }, 
-                    {
-                        'id': 2, 
-                        'imageAlt': '',
-                        'imageDescription': 'Item two',
-                        'images': {
-                            'full': 'https://placekitten.com/2500/2001',
-                            'scaled': 'https://placekitten.com/500/334'
-                        }
-                    }, 
-                    {
-                        'id': 3, 
-                        'imageAlt': '',
-                        'imageDescription': 'Item three',
-                        'images': {
-                            'full': 'https://placekitten.com/1500/1012',
-                            'scaled': 'https://placekitten.com/500/339'
-                        }
-                    }, 
-                    {
-                        'id': 4, 
-                        'imageAlt': '',
-                        'imageDescription': 'Item four',
-                        'images': {
-                            'full': 'https://placekitten.com/1500/1007',
-                            'scaled': 'https://placekitten.com/500/336'
-                        }
-                    }, 
-                    {
-                        'id': 5, 
-                        'imageAlt': '',
-                        'imageDescription': 'Item five',
-                        'images': {
-                            'full': 'https://placekitten.com/1500/1004',
-                            'scaled': 'https://placekitten.com/500/332'
-                        }
-                    }
-                ]
-            }"
-        >
-            Item
-        </button>
-
-
-    
-        <dialog image-slider class="w-screen h-screen max-w-full max-h-full p-0 bg-transparent backdrop:bg-neutral-600/70 backdrop:backdrop-blur-sm">
-            <div class="flex flex-col w-full h-full">
-                <template x-for="(slide, index) in item.slides" :key="index">
-                    <div class="flex flex-col w-full h-full" x-show="item.activeSlideId === index">
-                        <div class="absolute left-0 right-0 z-10 mx-auto">
-                            <div class="flex justify-center">
-                                <span image-slider-image-description class="py-1.5 px-3 rounded-b backdrop-blur-sm border-x border-neutral-700/50 shadow-md shadow-neutral-700/50 border-b bg-neutral-800/40 text-white" x-text="slide.imageDescription"></span>
-                            </div>
-                        </div>
-    
-                        <div class="flex items-center justify-center my-4 grow">
-                            <div class="relative flex justify-center w-full h-full">
-                                <div class="flex justify-center w-full h-full">
-                                    <div class="absolute flex items-center h-full" :class="{ 'w-full relative' : imgzoom == true }" x-data="{ imgzoom: false }">
-                                        <img 
-                                            image-slider-image 
-                                            :src="slide.images.full" 
-                                            loading="lazy"
-                                            tabindex="0" 
-                                            role="button" 
-                                            aria-pressed="false"
-                                            class="max-w-full max-h-full mx-auto border-4 border-transparent rounded-sm outline-none cursor-zoom-in focus-visible:border-mc-blue-500" 
-                                            :class="{ 'inset-0' : imgzoom == true }" 
-                                            @click="imgzoom = !imgzoom;"
-                                            @click.away="imgzoom = false;"
-                                            @keydown.escape="imgzoom = false;"
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </template>
-    
-                <button 
-                    type="button" 
-                    class="absolute left-0 z-10 h-full outline-none group drop-shadow hover:bg-neutral-700/40 focus-visible:bg-neutral-700/40" 
-                    previous-image-button
-                    @click="item.activeSlideId = item.activeSlideId === 0 ? item.slides.length - 1 : item.activeSlideId - 1"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-16 h-16 stroke-[0.25] sm:bg-transparent bg-neutral-800/20 rounded-r-full stroke-neutral-800/70 fill-white group-focus-visible:fill-mc-blue-500 group-hover:fill-mc-blue-500">
-                        <path d="M13.939 4.939 6.879 12l7.06 7.061 2.122-2.122L11.121 12l4.94-4.939z" />
-                    </svg>
-                </button>
-                
-                <button 
-                    type="button" 
-                    class="absolute right-0 z-10 h-full outline-none group drop-shadow hover:bg-neutral-700/40 focus-visible:bg-neutral-700/40" 
-                    next-image-button
-                    @click="item.activeSlideId = (item.activeSlideId + 1) % item.slides.length"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-16 h-16 stroke-[0.25] sm:bg-transparent bg-neutral-800/20 rounded-l-full stroke-neutral-800/70 fill-white group-focus-visible:fill-mc-blue-500 group-hover:fill-mc-blue-500">
-                        <path d="M10.061 19.061 17.121 12l-7.06-7.061-2.122 2.122L12.879 12l-4.94 4.939z" />
-                    </svg>
-                </button>
-                
-                <div image-slider-image-selection class="z-10 flex px-1 py-3 overflow-x-auto shadow-md rounded-t-md h-36 shrink-0 flex-nowrap bg-neutral-700/60 backdrop-blur">
-                    <template x-for="(slide, index) in item.slides" :key="index">
-                        <button
-                        class="w-32 h-full mx-2 overflow-hidden border-4 rounded shrink-0"
-                        :class="{ 
-                            'border-mc-blue-500 ': item.activeSlideId === index,
-                            'border-neutral-400': item.activeSlideId !== index 
-                        }" 
-                          @click="item.activeSlideId = index"
-                          >
-                          <img :src="slide.images.scaled" loading="lazy" alt="" class="object-cover w-full h-full">  
-                        </button>
-                    </template>
-                </div>
-            </div>
-            <button type="button" image-slider-close-button class="fixed z-20 rounded-full outline-none bg-neutral-800/40 top-3 right-6 group drop-shadow">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-12 h-12 stroke-[0.5] stroke-neutral-800/70 fill-white group-focus-visible:fill-mc-blue-500 group-hover:fill-mc-blue-500">
-                    <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z" />
-                </svg>
-            </button>
-        </dialog>
-    
+    {{-- <div x-data="{
+        currentPage: 1,
+        itemsPerPage: 5,
+        maxPagesToShow: 3, // Maximum number of paginator buttons to show around the current page button
+        items: [
+            { id: 1, name: 'Item 1' },
+            { id: 2, name: 'Item 2' },
+            { id: 3, name: 'Item 3' },
+            { id: 4, name: 'Item 4' },
+            { id: 5, name: 'Item 5' },
+            { id: 6, name: 'Item 6' },
+            { id: 7, name: 'Item 7' },
+            { id: 8, name: 'Item 8' },
+            { id: 9, name: 'Item 9' },
+            { id: 10, name: 'Item 10' },
+            { id: 11, name: 'Item 11' },
+            { id: 12, name: 'Item 12' },
+            { id: 13, name: 'Item 13' },
+            { id: 14, name: 'Item 14' },
+            { id: 15, name: 'Item 15' },
+            { id: 16, name: 'Item 16' },
+            { id: 17, name: 'Item 17' },
+            { id: 18, name: 'Item 18' },
+            { id: 19, name: 'Item 19' },
+            { id: 20, name: 'Item 20' },
+            { id: 21, name: 'Item 21' },
+            { id: 22, name: 'Item 22' },
+            { id: 23, name: 'Item 23' },
+            { id: 24, name: 'Item 24' },
+            { id: 24, name: 'Item 25' },
+            { id: 24, name: 'Item 26' },
+            { id: 24, name: 'Item 27' },
+            { id: 24, name: 'Item 28' },
+            { id: 24, name: 'Item 29' },
+            { id: 24, name: 'Item 30' },
+            { id: 24, name: 'Item 31' },
+            { id: 24, name: 'Item 32' },
+            { id: 24, name: 'Item 33' },
+            { id: 24, name: 'Item 34' },
+            { id: 24, name: 'Item 35' },
+            { id: 24, name: 'Item 36' },
+            { id: 24, name: 'Item 37' },
+            { id: 24, name: 'Item 38' },
+            { id: 24, name: 'Item 39' },
+            { id: 24, name: 'Item 40' },
+            { id: 24, name: 'Item 41' },
+            { id: 24, name: 'Item 42' },
+            { id: 24, name: 'Item 43' },
+            { id: 24, name: 'Item 44' },
+            { id: 24, name: 'Item 45' },
+            { id: 24, name: 'Item 46' },
+            { id: 24, name: 'Item 47' },
+            { id: 24, name: 'Item 48' },
+            { id: 24, name: 'Item 49' },
+            { id: 24, name: 'Item 50' },
+            { id: 24, name: 'Item 51' },
+            { id: 24, name: 'Item 52' },
+            { id: 24, name: 'Item 53' },
+            { id: 24, name: 'Item 54' },
+            { id: 24, name: 'Item 55' },
+            { id: 24, name: 'Item 56' },
+            { id: 24, name: 'Item 57' },
+            { id: 24, name: 'Item 58' },
+            { id: 25, name: 'Item 59' },
+            { id: 25, name: 'Item 60' }
+        ]
+    }">
+    <button x-on:click="currentPage = Math.max(currentPage - 1, 1)">Previous</button>
+    <div class="paginator">
+        <template x-for="page in Math.min(Math.ceil(items.length / itemsPerPage), maxPagesToShow * 2 + 1)" :key="page">
+            <template x-if="page === 1 || page === Math.ceil(items.length / itemsPerPage) || (page >= currentPage - maxPagesToShow && page <= currentPage + maxPagesToShow)">
+                <button x-on:click="currentPage = page" x-text="page" x-bind:class="{ 'underline': currentPage === page }"></button>
+            </template>
+        </template>
     </div>
+    <button x-on:click="currentPage++" x-bind:disabled="currentPage >= Math.ceil(items.length / itemsPerPage)">Next</button>
+
+    <div>
+        Page <span x-text="currentPage"></span> of <span x-text="Math.ceil(items.length / itemsPerPage)"></span>
+    </div>
+
+    <template x-for="(item, index) in items.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)" :key="index">
+        <div x-text="item.name"></div>
+    </template>
+    </div> --}}
+
+    <div x-data="{
+        currentPage: 1,
+        itemsPerPage: 5,
+        maxPagesAroundCurrentPage: 2, // Maximum number of paginator buttons to show around the current page button
+        items: [
+            { id: 1, name: 'Item 1' },
+            { id: 2, name: 'Item 2' },
+            { id: 3, name: 'Item 3' },
+            { id: 4, name: 'Item 4' },
+            { id: 5, name: 'Item 5' },
+            { id: 6, name: 'Item 6' },
+            { id: 7, name: 'Item 7' },
+            { id: 8, name: 'Item 8' },
+            { id: 9, name: 'Item 9' },
+            { id: 10, name: 'Item 10' },
+            { id: 11, name: 'Item 11' },
+            { id: 12, name: 'Item 12' },
+            { id: 13, name: 'Item 13' },
+            { id: 14, name: 'Item 14' },
+            { id: 15, name: 'Item 15' },
+            { id: 16, name: 'Item 16' },
+            { id: 17, name: 'Item 17' },
+            { id: 18, name: 'Item 18' },
+            { id: 19, name: 'Item 19' },
+            { id: 20, name: 'Item 20' },
+            { id: 21, name: 'Item 21' },
+            { id: 22, name: 'Item 22' },
+            { id: 23, name: 'Item 23' },
+            { id: 24, name: 'Item 24' },
+            { id: 24, name: 'Item 25' },
+            { id: 24, name: 'Item 26' },
+            { id: 24, name: 'Item 27' },
+            { id: 24, name: 'Item 28' },
+            { id: 24, name: 'Item 29' },
+            { id: 24, name: 'Item 30' },
+            { id: 24, name: 'Item 31' },
+            { id: 24, name: 'Item 32' },
+            { id: 24, name: 'Item 33' },
+            { id: 24, name: 'Item 34' },
+            { id: 24, name: 'Item 35' },
+            { id: 24, name: 'Item 36' },
+            { id: 24, name: 'Item 37' },
+            { id: 24, name: 'Item 38' },
+            { id: 24, name: 'Item 39' },
+            { id: 24, name: 'Item 40' },
+            { id: 24, name: 'Item 41' },
+            { id: 24, name: 'Item 42' },
+            { id: 24, name: 'Item 43' },
+            { id: 24, name: 'Item 44' },
+            { id: 24, name: 'Item 45' },
+            { id: 24, name: 'Item 46' },
+            { id: 24, name: 'Item 47' },
+            { id: 24, name: 'Item 48' },
+            { id: 24, name: 'Item 49' },
+            { id: 24, name: 'Item 50' },
+            { id: 24, name: 'Item 51' },
+            { id: 24, name: 'Item 52' },
+            { id: 24, name: 'Item 53' },
+            { id: 24, name: 'Item 54' },
+            { id: 24, name: 'Item 55' },
+            { id: 24, name: 'Item 56' },
+            { id: 24, name: 'Item 57' },
+            { id: 24, name: 'Item 58' },
+            { id: 25, name: 'Item 59' },
+            { id: 1, name: 'Item 1' },
+            { id: 2, name: 'Item 2' },
+            { id: 3, name: 'Item 3' },
+            { id: 4, name: 'Item 4' },
+            { id: 5, name: 'Item 5' },
+            { id: 6, name: 'Item 6' },
+            { id: 7, name: 'Item 7' },
+            { id: 8, name: 'Item 8' },
+            { id: 9, name: 'Item 9' },
+            { id: 10, name: 'Item 10' },
+            { id: 11, name: 'Item 11' },
+            { id: 12, name: 'Item 12' },
+            { id: 13, name: 'Item 13' },
+            { id: 14, name: 'Item 14' },
+            { id: 15, name: 'Item 15' },
+            { id: 16, name: 'Item 16' },
+            { id: 17, name: 'Item 17' },
+            { id: 18, name: 'Item 18' },
+            { id: 19, name: 'Item 19' },
+            { id: 20, name: 'Item 20' },
+            { id: 21, name: 'Item 21' },
+            { id: 22, name: 'Item 22' },
+            { id: 23, name: 'Item 23' },
+            { id: 24, name: 'Item 24' },
+            { id: 24, name: 'Item 25' },
+            { id: 24, name: 'Item 26' },
+            { id: 24, name: 'Item 27' },
+            { id: 24, name: 'Item 28' },
+            { id: 24, name: 'Item 29' },
+            { id: 24, name: 'Item 30' },
+            { id: 24, name: 'Item 31' },
+            { id: 24, name: 'Item 32' },
+            { id: 24, name: 'Item 33' },
+            { id: 24, name: 'Item 34' },
+            { id: 24, name: 'Item 35' },
+            { id: 24, name: 'Item 36' },
+            { id: 24, name: 'Item 37' },
+            { id: 24, name: 'Item 38' },
+            { id: 24, name: 'Item 39' },
+            { id: 24, name: 'Item 40' },
+            { id: 24, name: 'Item 41' },
+            { id: 24, name: 'Item 42' },
+            { id: 24, name: 'Item 43' },
+            { id: 24, name: 'Item 44' },
+            { id: 24, name: 'Item 45' },
+            { id: 24, name: 'Item 46' },
+            { id: 24, name: 'Item 47' },
+            { id: 24, name: 'Item 48' },
+            { id: 24, name: 'Item 49' },
+            { id: 24, name: 'Item 50' },
+            { id: 24, name: 'Item 51' },
+            { id: 24, name: 'Item 52' },
+            { id: 24, name: 'Item 53' },
+            { id: 24, name: 'Item 54' },
+            { id: 24, name: 'Item 55' },
+            { id: 24, name: 'Item 56' },
+            { id: 24, name: 'Item 57' },
+            { id: 24, name: 'Item 58' },
+            { id: 25, name: 'Item 59' },
+            { id: 25, name: 'Item 594' },
+            { id: 24, name: 'Item 43' },
+            { id: 24, name: 'Item 44' },
+            { id: 24, name: 'Item 45' },
+            { id: 24, name: 'Item 46' },
+            { id: 24, name: 'Item 47' },
+            { id: 24, name: 'Item 48' },
+            { id: 24, name: 'Item 49' },
+            { id: 24, name: 'Item 50' },
+            { id: 24, name: 'Item 51' },
+            { id: 24, name: 'Item 52' },
+            { id: 24, name: 'Item 53' },
+            { id: 24, name: 'Item 54' },
+            { id: 24, name: 'Item 55' },
+            { id: 24, name: 'Item 56' },
+            { id: 24, name: 'Item 57' },
+            { id: 24, name: 'Item 58' },
+            { id: 25, name: 'Item 59' },
+            { id: 1, name: 'Item 1' },
+            { id: 2, name: 'Item 2' },
+            { id: 3, name: 'Item 3' },
+            { id: 4, name: 'Item 4' },
+            { id: 5, name: 'Item 5' },
+            { id: 6, name: 'Item 6' },
+            { id: 7, name: 'Item 7' },
+            { id: 8, name: 'Item 8' },
+            { id: 9, name: 'Item 9' },
+            { id: 10, name: 'Item 10' },
+            { id: 11, name: 'Item 11' },
+            { id: 12, name: 'Item 12' },
+            { id: 13, name: 'Item 13' },
+            { id: 14, name: 'Item 14' },
+            { id: 15, name: 'Item 15' },
+            { id: 16, name: 'Item 16' },
+            { id: 17, name: 'Item 17' },
+            { id: 18, name: 'Item 18' },
+            { id: 19, name: 'Item 19' },
+            { id: 20, name: 'Item 20' },
+            { id: 21, name: 'Item 21' },
+            { id: 22, name: 'Item 22' },
+            { id: 23, name: 'Item 23' },
+            { id: 24, name: 'Item 24' },
+            { id: 24, name: 'Item 25' },
+            { id: 24, name: 'Item 26' },
+            { id: 24, name: 'Item 27' },
+            { id: 24, name: 'Item 28' },
+            { id: 24, name: 'Item 29' },
+            { id: 24, name: 'Item 30' },
+            { id: 24, name: 'Item 31' },
+            { id: 24, name: 'Item 32' },
+            { id: 24, name: 'Item 33' },
+            { id: 24, name: 'Item 34' },
+            { id: 24, name: 'Item 35' },
+            { id: 24, name: 'Item 36' },
+            { id: 24, name: 'Item 37' },
+            { id: 24, name: 'Item 38' },
+            { id: 24, name: 'Item 39' },
+            { id: 24, name: 'Item 40' },
+            { id: 24, name: 'Item 41' },
+            { id: 24, name: 'Item 42' },
+            { id: 24, name: 'Item 43' },
+            { id: 24, name: 'Item 44' },
+            { id: 24, name: 'Item 45' },
+            { id: 24, name: 'Item 46' },
+            { id: 24, name: 'Item 47' },
+            { id: 24, name: 'Item 48' },
+            { id: 24, name: 'Item 49' },
+            { id: 24, name: 'Item 50' },
+            { id: 24, name: 'Item 51' },
+            { id: 24, name: 'Item 52' },
+            { id: 24, name: 'Item 53' },
+            { id: 24, name: 'Item 54' },
+            { id: 24, name: 'Item 55' },
+            { id: 24, name: 'Item 56' },
+            { id: 24, name: 'Item 57' },
+            { id: 24, name: 'Item 58' },
+            { id: 25, name: 'Item 59' },
+            { id: 25, name: 'Item 594' },
+            { id: 4, name: 'Item 4' },
+            { id: 5, name: 'Item 5' },
+            { id: 6, name: 'Item 6' },
+            { id: 7, name: 'Item 7' },
+            { id: 8, name: 'Item 8' },
+            { id: 9, name: 'Item 9' },
+            { id: 10, name: 'Item 10' },
+            { id: 11, name: 'Item 11' },
+            { id: 12, name: 'Item 12' },
+            { id: 13, name: 'Item 13' },
+            { id: 14, name: 'Item 14' },
+            { id: 15, name: 'Item 15' },
+            { id: 16, name: 'Item 16' },
+            { id: 17, name: 'Item 17' },
+            { id: 18, name: 'Item 18' },
+            { id: 19, name: 'Item 19' },
+            { id: 20, name: 'Item 20' },
+            { id: 21, name: 'Item 21' },
+            { id: 22, name: 'Item 22' },
+            { id: 23, name: 'Item 23' },
+            { id: 24, name: 'Item 24' },
+            { id: 24, name: 'Item 25' },
+            { id: 24, name: 'Item 26' },
+            { id: 24, name: 'Item 27' },
+            { id: 24, name: 'Item 28' },
+            { id: 24, name: 'Item 29' },
+            { id: 24, name: 'Item 30' },
+            { id: 24, name: 'Item 31' },
+            { id: 24, name: 'Item 32' },
+            { id: 24, name: 'Item 33' },
+            { id: 24, name: 'Item 34' },
+            { id: 24, name: 'Item 35' },
+            { id: 24, name: 'Item 36' },
+            { id: 24, name: 'Item 37' },
+            { id: 24, name: 'Item 38' },
+            { id: 24, name: 'Item 39' },
+            { id: 24, name: 'Item 40' },
+            { id: 24, name: 'Item 41' },
+            { id: 24, name: 'Item 42' },
+            { id: 24, name: 'Item 43' },
+            { id: 24, name: 'Item 44' },
+            { id: 24, name: 'Item 45' },
+            { id: 24, name: 'Item 46' },
+            { id: 24, name: 'Item 47' },
+            { id: 24, name: 'Item 48' },
+            { id: 24, name: 'Item 49' },
+            { id: 24, name: 'Item 50' },
+            { id: 24, name: 'Item 51' },
+            { id: 24, name: 'Item 52' },
+            { id: 24, name: 'Item 53' },
+            { id: 24, name: 'Item 54' },
+            { id: 24, name: 'Item 55' },
+            { id: 24, name: 'Item 56' },
+            { id: 24, name: 'Item 57' },
+            { id: 24, name: 'Item 58' },
+            { id: 25, name: 'Item 59' },
+            { id: 1, name: 'Item 1' },
+            { id: 2, name: 'Item 2' },
+            { id: 3, name: 'Item 3' },
+            { id: 4, name: 'Item 4' },
+            { id: 5, name: 'Item 5' },
+            { id: 6, name: 'Item 6' },
+            { id: 7, name: 'Item 7' },
+            { id: 8, name: 'Item 8' },
+            { id: 9, name: 'Item 9' },
+            { id: 10, name: 'Item 10' },
+            { id: 11, name: 'Item 11' },
+            { id: 12, name: 'Item 12' },
+            { id: 13, name: 'Item 13' },
+            { id: 14, name: 'Item 14' },
+            { id: 15, name: 'Item 15' },
+            { id: 16, name: 'Item 16' },
+            { id: 17, name: 'Item 17' },
+            { id: 18, name: 'Item 18' },
+            { id: 19, name: 'Item 19' },
+            { id: 20, name: 'Item 20' },
+            { id: 21, name: 'Item 21' },
+            { id: 22, name: 'Item 22' },
+            { id: 23, name: 'Item 23' },
+            { id: 24, name: 'Item 24' },
+            { id: 24, name: 'Item 25' },
+            { id: 24, name: 'Item 26' },
+            { id: 24, name: 'Item 27' },
+            { id: 24, name: 'Item 28' },
+            { id: 24, name: 'Item 29' },
+            { id: 24, name: 'Item 30' },
+            { id: 24, name: 'Item 31' },
+            { id: 24, name: 'Item 32' },
+            { id: 24, name: 'Item 33' },
+            { id: 24, name: 'Item 34' },
+            { id: 24, name: 'Item 35' },
+            { id: 24, name: 'Item 36' },
+            { id: 24, name: 'Item 37' },
+            { id: 24, name: 'Item 38' },
+            { id: 24, name: 'Item 39' },
+            { id: 24, name: 'Item 40' },
+            { id: 24, name: 'Item 41' },
+            { id: 24, name: 'Item 42' },
+            { id: 24, name: 'Item 43' },
+            { id: 24, name: 'Item 44' },
+            { id: 24, name: 'Item 45' },
+            { id: 24, name: 'Item 46' },
+            { id: 24, name: 'Item 47' },
+            { id: 24, name: 'Item 48' },
+            { id: 24, name: 'Item 49' },
+            { id: 24, name: 'Item 50' },
+            { id: 24, name: 'Item 51' },
+            { id: 24, name: 'Item 52' },
+            { id: 24, name: 'Item 53' },
+            { id: 24, name: 'Item 54' },
+            { id: 24, name: 'Item 55' },
+            { id: 24, name: 'Item 56' },
+            { id: 24, name: 'Item 57' },
+            { id: 24, name: 'Item 58' },
+            { id: 25, name: 'Item 59' },
+            { id: 25, name: 'Item 594' },
+            { id: 24, name: 'Item 43' },
+            { id: 24, name: 'Item 44' },
+            { id: 24, name: 'Item 45' },
+            { id: 24, name: 'Item 46' },
+            { id: 24, name: 'Item 47' },
+            { id: 24, name: 'Item 48' },
+            { id: 24, name: 'Item 49' },
+            { id: 24, name: 'Item 50' },
+            { id: 24, name: 'Item 51' },
+            { id: 24, name: 'Item 52' },
+            { id: 24, name: 'Item 53' },
+            { id: 24, name: 'Item 54' },
+            { id: 24, name: 'Item 55' },
+            { id: 24, name: 'Item 56' },
+            { id: 24, name: 'Item 57' },
+            { id: 24, name: 'Item 58' },
+            { id: 25, name: 'Item 59' },
+            { id: 1, name: 'Item 1' },
+            { id: 2, name: 'Item 2' },
+            { id: 3, name: 'Item 3' },
+            { id: 4, name: 'Item 4' },
+            { id: 5, name: 'Item 5' },
+            { id: 6, name: 'Item 6' },
+            { id: 7, name: 'Item 7' },
+            { id: 8, name: 'Item 8' },
+            { id: 9, name: 'Item 9' },
+            { id: 10, name: 'Item 10' },
+            { id: 11, name: 'Item 11' },
+            { id: 12, name: 'Item 12' },
+            { id: 13, name: 'Item 13' },
+            { id: 14, name: 'Item 14' },
+            { id: 15, name: 'Item 15' },
+            { id: 16, name: 'Item 16' },
+            { id: 17, name: 'Item 17' },
+            { id: 18, name: 'Item 18' },
+            { id: 19, name: 'Item 19' },
+            { id: 20, name: 'Item 20' },
+            { id: 21, name: 'Item 21' },
+            { id: 22, name: 'Item 22' },
+            { id: 23, name: 'Item 23' },
+            { id: 24, name: 'Item 24' },
+            { id: 24, name: 'Item 25' },
+            { id: 24, name: 'Item 26' },
+            { id: 24, name: 'Item 27' },
+            { id: 24, name: 'Item 28' },
+            { id: 24, name: 'Item 29' },
+            { id: 24, name: 'Item 30' },
+            { id: 24, name: 'Item 31' },
+            { id: 24, name: 'Item 32' },
+            { id: 24, name: 'Item 33' },
+            { id: 24, name: 'Item 34' },
+            { id: 24, name: 'Item 35' },
+            { id: 24, name: 'Item 36' },
+            { id: 24, name: 'Item 37' },
+            { id: 24, name: 'Item 38' },
+            { id: 24, name: 'Item 39' },
+            { id: 24, name: 'Item 40' },
+            { id: 24, name: 'Item 41' },
+            { id: 24, name: 'Item 42' },
+            { id: 24, name: 'Item 43' },
+            { id: 24, name: 'Item 44' },
+            { id: 24, name: 'Item 45' },
+            { id: 24, name: 'Item 46' },
+            { id: 24, name: 'Item 47' },
+            { id: 24, name: 'Item 48' },
+            { id: 24, name: 'Item 49' },
+            { id: 24, name: 'Item 50' },
+            { id: 24, name: 'Item 51' },
+            { id: 24, name: 'Item 52' },
+            { id: 24, name: 'Item 53' },
+            { id: 24, name: 'Item 54' },
+            { id: 24, name: 'Item 55' },
+            { id: 24, name: 'Item 56' },
+            { id: 24, name: 'Item 57' },
+            { id: 24, name: 'Item 58' },
+            { id: 25, name: 'Item 59' },
+            { id: 25, name: 'Item 594' },
+            { id: 25, name: 'Item 60' }
+        ]
+    }">
+        
+        <div class="inline-flex -space-x-px">
+            <button class="h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg w-9 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" x-on:click="currentPage = 1"><<</button>
+            <button class="h-8 leading-tight text-gray-500 bg-white border border-gray-300 w-9 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" x-on:click="currentPage = Math.max(currentPage - 1, 1)"><</button>
+            <template x-for="page in Math.ceil(items.length / itemsPerPage)" :key="page">
+                <button class="h-8 leading-tight text-gray-500 bg-white border border-gray-300 w-9 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" x-on:click="currentPage = page" x-text="page" x-bind:class="{ '!border-red-500': currentPage === page }" x-show="currentPage + 1"></button>
+            </template>
+            <button class="h-8 leading-tight text-gray-500 bg-white border border-gray-300 w-9 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" x-on:click="currentPage++" x-bind:disabled="currentPage >= Math.ceil(items.length / itemsPerPage)">></button>
+            <button class="h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg w-9 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" x-on:click="currentPage = Math.ceil(items.length / itemsPerPage)">>></button>
+        </div>
+    
+        <div>
+            Page <span x-text="currentPage"></span> of <span x-text="Math.ceil(items.length / itemsPerPage)"></span>
+        </div>
+    
+        <template x-for="(item, index) in items.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)" :key="index">
+            <div x-text="item.name"></div>
+        </template>
+
+
+
+
+    </div>
+
+
+    {{-- <div x-data="{ number: 13 }">
+        <button @click="number--; number = Math.max(number, 1)">-</button>
+        <span x-text="number"></span>
+        <button @click="number++; number = Math.min(number, 25)">+</button>
+        <ul>
+            <template x-for="n in [-2, -1, 0, 1, 2]" :key="n">
+                <button x-on:click="number = n" x-text="number + n" x-show="number + n >= 1 && number + n <= 25" x-bind:class="{ 'underline': number === n }"></button>
+                <li x-text="number + n" x-show="number + n >= 1 && number + n <= 25"></li>
+            </template>
+        </ul>
+    </div> --}}
+
+
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
     
 </x-app-layout>
